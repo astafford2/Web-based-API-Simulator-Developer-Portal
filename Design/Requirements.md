@@ -13,6 +13,8 @@
 
 - **FR7:** Users will be able to submit an application for private access to the application. [*Medium Priority*] (**BR2**)
 
+- **FR8:** Administrators will be able to create the documentation form for each endpoint that will be shown on the API references page. [*Medium Priority*] (**BR2**)
+
 <br>
 
 # Non-functional Requirements
