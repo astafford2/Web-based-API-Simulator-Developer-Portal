@@ -9,11 +9,14 @@ High-level summary of project
 - Jaren Provost
 
 ## Client Partner Information
-### <em>Company:</em>
-**COMPANY**
+### <em>Company:<em> 
+Accutech Systems Corporation
 
 ### <em>People:</em>
-**PEOPLE**
+<ul>
+    <li>Cam Dowless (Technical Project Manager)
+    <li>Trey Gourley (Lead Architect)
+</ul>
 
 ## Links
 - Any project links here
