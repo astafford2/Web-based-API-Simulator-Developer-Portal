@@ -2,8 +2,6 @@
 ## Front-end:
 - [Vue.js](https://vuejs.org/) - Accutech currently uses Vue.js for their front-end web app functionality, and so we chose to keep consistent with the company here
 
-- [ASP.NET MVC]() - 
-
 - [.NET Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-5.0&tabs=visual-studio) - Accutech currently uses .NET Razor Pages for some functionality, and so we chose this to keep consistent with the company
 
 <br>
