@@ -9,7 +9,7 @@
 
 - **FR5:** The application shall have an API references page that documents each endpoint of the API along with the object that the endpoint works with [*High Priority*] (**BR2**)
 
-- **FR6:** The API references page shall have a list of objets and endpoints included in the documentation that allows the user to navigate to where that specific endpoint is listed in the documentation [*Medium Priority*] (**BR2**)
+- **FR6:** The API references page shall have a list of links to objects and endpoints included in the documentation that allows the user to navigate to where that object or endpoint is listed in the documentaiton [*Medium Priority*] (**BR2**)
 
 - **FR7:** The application shall have a code workflow page to show common workflows for developers. [*High Priority*] (**BR2**)
 
@@ -29,7 +29,7 @@
 
 - **NR2:** The application shall use electronic signatures to authorize user credentials for application login. [*Low Priority*] (**BR2**)
 
-- **NR3:** The console/sandbox page shall organize the API calls by the object that the call works with. [*Low Priority*] (**BR2**)
+- **NR3:** The API references page shall organize the API calls by the object that the call works with. [*Low Priority*] (**BR2**)
 
 - **NR4:** The application shall be designed using the Accutech/Cheetah colors and logo [*Low Priority*] (**BR1**)
 
