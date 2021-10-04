@@ -1,5 +1,9 @@
 # Domain Model
 
+<br>
+<img src="C:\Users\jxpro\Desktop\CS495PRO\Design\DomainModelPicture">
+<br>
+
 [Domain Model](https://lucid.app/lucidchart/4c525eac-2b89-42ab-804a-0e218c989036/edit?viewport_loc=-537%2C-94%2C2920%2C1624%2C0_0&invitationId=inv_5529c8c6-a23c-4871-a17d-501a5ab236be)
 
 ## Classses
