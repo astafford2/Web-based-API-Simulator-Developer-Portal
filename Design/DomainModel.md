@@ -1,7 +1,7 @@
 # Domain Model
 
 <br>
-<img src="DomainModel.PNG">
+<img src="DomainModelImage.PNG">
 <br>
 
 
@@ -13,8 +13,11 @@
 **Home Page:** The home page of the application. Will have generic marketing information, pictures/examples of the API, team pictures, etc.<br>
 **Login Page:** Web page to enable a user to login to the private side of the application.<br>
 **Access Request:** Request for access to the private side of the portal. Will be sent to an internal company email for review.<br>
-**Sample Code/WorkFlows Page:** Documentation page with API endpoint documentation and examples of common workflows users may need.<br>
-**Code Workflow:** Code workflow object: the sample code/workflows page will have multiple of these interated in.<br>
-**Console/Sandbox Page:** Interactable page to test live parameters and responses with each API endpoint. Will connect to multiple endpoints.<br>
+**API References Page** Documentation page with API endpoint documentation and examples of common workflows users may need.<br>
 **API Endpoint:** Endpoint connection for an API call to work with the interaction of the console/sandbox page. Will be able to contain multiple parameters.<br>
 **Endpoint Parameter:** Parameter information for an API endpoint call.
+**Code Workflow:** Code workflow object: the sample code/workflows page will have multiple of these interated in.<br>
+**Console/Sandbox Page:** Interactable page to test live parameters and responses with each API endpoint. Will connect to multiple endpoints.<br>
+**API References Administration Page:** Page that allows administrators to create objects, endpoints, and parameters that will be displayed on the API References page. <br>
+**Endpoint Creation:** Allows an administrator to create an endpoint.<br>
+**Parameter Creation:** Allows an administrator to create endpoint parameters.
