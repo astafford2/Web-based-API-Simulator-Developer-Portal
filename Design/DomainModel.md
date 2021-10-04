@@ -1,14 +1,9 @@
 # Domain Model
 
 <br>
-<<<<<<< HEAD
-
-<img src="https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal/DomainModelPicture.jpeg">
-
+<img src="DomainModelPicture.jpeg">
 <br>
-=======
-<img src="C:\Users\jxpro\Desktop\CS495PRO\Design\DomainModelPicture">
-<br>
+
 
 [Domain Model](https://lucid.app/lucidchart/4c525eac-2b89-42ab-804a-0e218c989036/edit?viewport_loc=-537%2C-94%2C2920%2C1624%2C0_0&invitationId=inv_5529c8c6-a23c-4871-a17d-501a5ab236be)
 
@@ -23,4 +18,3 @@
 **Console/Sandbox Page:** Interactable page to test live parameters and responses with each API endpoint. Will connect to multiple endpoints.<br>
 **API Endpoint:** Endpoint connection for an API call to work with the interaction of the console/sandbox page. Will be able to contain multiple parameters.<br>
 **Endpoint Parameter:** Parameter information for an API endpoint call.
->>>>>>> 8a42672b33c6a0b62741a6fa2000adfecf892418
