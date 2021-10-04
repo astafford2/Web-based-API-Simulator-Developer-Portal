@@ -3,7 +3,7 @@
 
 - **FR2:** The application shall have a sign-in page to login as a specified user. [*Low Priority*] (**BR2**)
 
-- **FR3:** The application shall have a code workflow page to show common workflows for developers. [*High Priority* (**BR2**)
+- **FR3:** The application shall have a code workflow page to show common workflows for developers. [*High Priority*] (**BR2**)
 
 - **FR4:** The application shall have an interactive console/sandbox page to test API calls with live data. [*High Priority*] (**BR2**)
 
@@ -11,9 +11,12 @@
 
 - **FR6:** The console/sandbox page shall have capability to test API calls with live data and responses. [*High Priority*] (**BR2**)
 
-- **FR7:** Users will be able to submit an application for private access to the application. [*Medium Priority*] (**BR2**)
+- **FR7:** The application shall have an administration page that only those with administrators can visit. [*Medium Priority*] (**BR2**)
 
-- **FR8:** Administrators will be able to create the documentation form for each endpoint that will be shown on the API references page. [*Medium Priority*] (**BR2**)
+- **FR8:** The administration page shall let administrators create the form for each endpoint that will then be seen in the documentation. [*High Priority*] (**BR2**)
+
+- **FR9:** Users shall be able to submit an application for private access to the application. [*Medium Priority*] (**BR2**)
+
 
 <br>
 
@@ -26,4 +29,4 @@
 
 - **NR4:** The application shall be designed using the Accutech/Cheetah colors and logo [*Low Priority*] (**BR1**)
 
-- **NR5:** Private access applications will be sent to an internal location for review before acceptance. [*Medium Priority*] (**BR2**)
+- **NR5:** Private access applications shall be sent to an internal location for review before acceptance. [*Medium Priority*] (**BR2**)
