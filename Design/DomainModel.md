@@ -1,7 +1,7 @@
 # Domain Model
 
 <br>
-<img src="DomainModelPicture.jpeg">
+<img src="DomainModel.PNG">
 <br>
 
 
