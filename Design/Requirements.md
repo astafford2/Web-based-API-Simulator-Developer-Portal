@@ -3,19 +3,23 @@
 
 - **FR2:** The application shall have a sign-in page to login as a specified user. [*Low Priority*] (**BR2**)
 
-- **FR3:** The application shall have a code workflow page to show common workflows for developers. [*High Priority*] (**BR2**)
+- **FR3:** The sign-in page shall allow users to request access to the documentation if they have not already been given access [*Medium Priority*] (**BR2**)
 
-- **FR4:** The application shall have an interactive console/sandbox page to test API calls with live data. [*High Priority*] (**BR2**)
+- **FR4:** The application shall have a page thanking the user for requesting access and giving them the option to return to the homepage until they gain access [*Medium Priority*] (**BR2**)
 
-- **FR5:** The console/sandbox page shall have a list of most commonly used Cheetah API calls. [*High Priority*] (**BR2**)
+- **FR5:** The application shall have an API references page that documents each endpoint of the API along with the object that the endpoint works with [*High Priority*] (**BR2**)
 
-- **FR6:** The console/sandbox page shall have capability to test API calls with live data and responses. [*High Priority*] (**BR2**)
+- **FR6:** The API references page shall have a list of objets and endpoints included in the documentation that allows the user to navigate to where that specific endpoint is listed in the documentation [*Medium Priority*] (**BR2**)
 
-- **FR7:** The application shall have an administration page that only those with administrators can visit. [*Medium Priority*] (**BR2**)
+- **FR7:** The application shall have a code workflow page to show common workflows for developers. [*High Priority*] (**BR2**)
 
-- **FR8:** The administration page shall let administrators create the form for each endpoint that will then be seen in the documentation. [*High Priority*] (**BR2**)
+- **FR8:** The application shall have an interactive console/sandbox page to test API calls with live data. [*High Priority*] (**BR2**)
 
-- **FR9:** Users shall be able to submit an application for private access to the application. [*Medium Priority*] (**BR2**)
+- **FR9:** The console/sandbox page shall have capability to test API calls with live data and responses. [*High Priority*] (**BR2**)
+
+- **FR10:** The application shall have an administration page that only those with administrators can visit. [*Medium Priority*] (**BR2**)
+
+- **FR11:** The administration page shall let administrators create the form for each endpoint that will then be seen in the documentation. [*High Priority*] (**BR2**)
 
 
 <br>
