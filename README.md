@@ -1,6 +1,5 @@
 # Web-based-API-Simulator-Developer-Portal
 ## Summary
-High-level summary of project
 
 For our project we have been tasked to construct a user friendly and more comprehensive Cheetah developer portal that will contain a library of documentation of each API enpoint. The information on this developer portal will allow clients and software developers to the capabilities of the API. It will also allow developers a space to test the functionality of the API.
 
