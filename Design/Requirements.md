@@ -23,6 +23,8 @@
 
 - **FR12:** The administration page shall let administrators create the form for each endpoint that will then be seen in the documentation. [*High Priority*] (**BR2**)
 
+- **FR13:** The application will feature a navigation bar that allows the user to move to and from pages on the web portal. [*Medium Priority*] (**BR2**)
+
 
 <br>
 
