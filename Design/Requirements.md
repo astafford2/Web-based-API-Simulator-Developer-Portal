@@ -5,8 +5,6 @@
 
 - **FR3:** The sign-in page shall allow users to request access to the documentation if they have not already been given access [*Low Priority*] (**BR2**)
 
-- **FR4:** The sign-in page shall only allow those with authentication to view the documentation [*Low Priority*] (**BR2**)
-
 - **FR5:** The application shall have a page thanking the user for requesting access and giving them the option to return to the homepage until they gain access [*Low Priority*] (**BR2**)
 
 - **FR6:** The application shall have an API references page that documents each endpoint of the API along with the object that the endpoint works with [*High Priority*] (**BR2**)
