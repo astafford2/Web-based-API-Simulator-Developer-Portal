@@ -1,8 +1,9 @@
 # Web-based-API-Simulator-Developer-Portal
 ## Summary
 
-For our project we have been tasked to construct a user friendly and more comprehensive Cheetah developer portal that will contain a library of documentation of each API enpoint. The information on this developer portal will allow clients and software developers to the capabilities of the API. It will also allow developers a space to test the functionality of the API.
+For our project we have been tasked to construct a user friendly and more comprehensive Cheetah developer portal that will contain a comprehensive library of documentation of each API endpoint. The information on this developer portal will allow clients and software developers to discover the capabilities of the API. It will also be a space to allow developers to test the functionality of the API with live parameters and responses.
 
+<br>
 
 ## Team Members
 - Andrew Stafford
@@ -11,19 +12,15 @@ For our project we have been tasked to construct a user friendly and more compre
 - Jaren Provost
 
 ## Client Partner Information
-### <em>Company:<em> 
+### <em>Company:<em>
 Accutech Systems Corporation
 
 ### <em>People:</em>
-<ul>
-    <li>Cam Dowless (Technical Project Manager)
-    <li>Trey Gourley (Lead Architect)
-</ul>
+- Cam Dowless (Technical Project Manager)
+- Trey Gourley (Lead Architect)
 
 ## Links
-<ul>
-    <li> https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal/projects/1
-</ul>
+- https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal/projects/1
 
 ## Code Repositories
 - Code repositories here
