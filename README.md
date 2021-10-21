@@ -11,6 +11,9 @@ For our project we have been tasked to construct a user friendly and more compre
 - Austin Belt
 - Jaren Provost
 
+## Mentor
+- Ryland Babusiak
+
 ## Client Partner Information
 ### <em>Company:<em>
 Accutech Systems Corporation
