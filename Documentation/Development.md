@@ -2,6 +2,7 @@
 
 ## Tech Aspects
 
+
 ## Technologies to Replicate
 - `.NET 5 SDK`
 - `Vue CLI`
@@ -15,15 +16,17 @@
 
 ## Folder structure
     .
-    ├── dotnet\Portal                   # Back-end folder for all .NET files
+    ├── dotnet                          # Back-end folder for all .NET files
         ├── Portal
-            ├── Classes\                    # Folder containing all classes of the back-end
-                ├── Area.cs                     # **EXPLANATION**
-                ├── Endpoint.cs                 # Class laying out an API endpoint object
-                ├── Parameter.cs                # Class laying out an endpoint parameter object
-            ├── Controllers\
-                ├── EndpointController.cs       # **EXPLANATION**
-            ├── *** Any other important files?? ***
+            ├── Portal
+                ├── Classes\                    # Folder containing all classes of the back-end
+                    ├── Area.cs                     # **EXPLANATION**
+                    ├── Endpoint.cs                 # Class laying out an API endpoint object
+                    ├── Parameter.cs                # Class laying out an endpoint parameter object
+                ├── Controllers\
+                    ├── EndpointController.cs       # **EXPLANATION**
+                ├── *** Any other important files?? ***
+        └── Dockerfile                      # Dockerfile to build back-end development image
     ├── vue\                            # Front-end folder for all vue files
         ├── public\                         # Files that are served raw and accessible in its plain URL
         ├── src\                            # Source files for vue front-end
@@ -40,7 +43,12 @@
             ├── App.vue                         # Main HTML template for Vue pages
             ├── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
         ├── tests\unit\                     # Test folder for vue files
-        ├── package.json                    # JSON file to store vue config data and npm script aliases
-    └── Dockerfile                      # Docker file to build development image
+        ├── Dockerfile                      # Dockerfile to build front-end development image
+        └── package.json                    # JSON file to store vue config data and npm script aliases
 
     [Truncated for brevity, only relevant folders/files were highlighted.]
+
+## Important files
+**package.json** - This file stores all dependencies needed for the project, dependencies are stored in json format with their name and version number to be installed by `npm`
+
+**Dockerfile**
