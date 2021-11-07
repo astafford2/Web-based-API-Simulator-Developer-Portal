@@ -18,14 +18,16 @@
     .
     ├── dotnet                          # Back-end folder for all .NET files
         ├── Portal
-            ├── Portal
-                ├── Classes\                    # Folder containing all classes of the back-end
-                    ├── Area.cs                     # **EXPLANATION**
-                    ├── Endpoint.cs                 # Class laying out an API endpoint object
-                    ├── Parameter.cs                # Class laying out an endpoint parameter object
-                ├── Controllers\
-                    ├── EndpointController.cs       # **EXPLANATION**
-                ├── *** Any other important files?? ***
+            ├── Portal.sln
+                ├── Portal.csproj
+                    ├── Classes\                    # Folder containing all classes of the back-end
+                        ├── Area.cs                     # Class laying out an area object (area in this instance is the object that each endpoint works with)
+                        ├── Endpoint.cs                 # Class laying out an API endpoint object
+                        ├── Parameter.cs                # Class laying out an endpoint parameter object
+                    ├── Controllers\
+                        ├── ExampleController.cs        # Web API controller that contains the example API endpoint that we are displaying in the frontend
+                ├── Portal.Test.csproj
+                    ├── ExampleControllerTest.cs        # Class of unit tests for the ExampleController.cs controller
         └── Dockerfile                      # Dockerfile to build back-end development image
     ├── vue\                            # Front-end folder for all vue files
         ├── public\                         # Files that are served raw and accessible in its plain URL
