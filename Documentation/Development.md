@@ -2,7 +2,6 @@
 
 ## Tech Aspects
 
-
 ## Technologies to Replicate
 - `.NET 5 SDK`
 - `NodeJS` for `npm` usage
@@ -19,18 +18,27 @@
     ├── dotnet\                         # Back-end folder for all .NET files
         ├── Portal\
             ├── Portal\
-                ├── Classes\                    # Folder containing all classes of the back-end
+                ├── Classes\                    # Folder containing all classes in the back-end
                     ├── Area.cs                     # Class laying out an area object (area in this instance is the object that each endpoint works with)
                     ├── Endpoint.cs                 # Class laying out an API endpoint object
+                    ├── MailSetting.cs              # Class that gets and sets each form input that gets posted from the frontend
                     ├── Parameter.cs                # Class laying out an endpoint parameter object
-                ├── Controllers\
+                ├── Controllers\                # Folder containing all the controllers in the back-end
                     ├── ExampleController.cs        # Web API controller that contains the example API endpoint that we are displaying in the frontend
-                ├── Properties\launchSettings.json
-                ├── appSettings.json
-                ├── Portal.csproj
-            ├── Portal.Test\
+                    ├── FormDataController.cs       # Web API controller that contains logic for sending an email to a specified reciever
+                ├── Services\                   # Folder containing all of the service in the back-end
+                    ├── EmailService.cs             # Service that extends the IEmailService interface that lays out the body of the email to be sent
+                    ├── IEmailService.cs            # Interface that contains a task that asynchronously sends and email
+                ├── ViewModels\                 # Folder containing all of the view models in the back-end
+                    ├── EmailFormViewModel.cs       # View Model that contains the getters and setters for all of the elements to be sent in the email
+                ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
+                ├── appSettings.json            # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
+                ├── Portal.csproj               # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
+            ├── Portal.Test\                    # Folder containing all of the test classes in the back-end
                 ├── ExampleControllerTest.cs        # Class of unit tests for the ExampleController.cs controller
-                └── Portal.Test.csproj
+                ├── FormDataController.cs           # Class of unit tests for the FormDataController.cs controller
+                ├── testconfig.json                 # Json file that holds the information for the testing environment
+                └── Portal.Test.csproj          # C# project that contains all of the test classes and the testconfig.json file
             └── Portal.sln                      # Contains information about what needs to be compiled
         └── Dockerfile                      # Dockerfile to build back-end development image
     ├── vue\                            # Front-end folder for all vue files
@@ -38,17 +46,27 @@
         ├── src\                            # Source files for vue front-end
             ├── assets\                         # Asset files for the vue front-end
             ├── components\                     # HTML components to import in vue files
+                ├── Navbar                          # Component that contains HTML for the navigation bar featured on App.vue
+                ├── Footer                          # Component that contains HTML for the footer featured on App.vue 
+            ├── repositories\                   # Folder containing repository pattern Javascript files
+                ├── ExampleLocalRepository.js       # Javascript file containing the mock data for unit testing
+                ├── ExampleRepository.js            # Javascript file that points to our web api object "Example" and creates a get method
+                ├── FormDataRepository.js           # Javascript file that points to our web api object "FormData" and creats a post method
+                ├── Repository.js                   # Javascript file that points to the url that our backend is running on
+                ├── RepositoryFactory.js            # Javascript file that sets environments for either unit testing or running the project
             ├── router\                         # Folder to house the Vue router
                 ├── index.js                        # JavaScript file to declare routes and paths
             ├── views\                          # Folder to house the front-end HTML pages
-                ├── Administration.vue              # HTML for the Administration page
+                ├── Administration.vue              # HTML and Javascript logic for the Administration page
                 ├── Console.vue                     # HTML for the Console page
                 ├── Home.vue                        # HTML for the Home page
-                ├── Login.vue                       # HTML for the Login page
-                ├── References.vue                  # HTML for the References page
+                ├── Login.vue                       # HTML and Javascript logic for the Login page
+                ├── References.vue                  # HTML and Javascript logic for the References page
             ├── App.vue                         # Main HTML template for Vue pages
             ├── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
         ├── tests\unit\                     # Test folder for vue files
+            ├── Administration.spec.js      # JavaScript file containing the unit tests for Administration.vue
+            ├── References.spec.js          # JavaScript file containing the unit tests for References.vue
         ├── Dockerfile                      # Dockerfile to build front-end development image
         └── package.json                    # JSON file to store vue config data and npm script aliases
 
