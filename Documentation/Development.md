@@ -113,6 +113,7 @@
     - `npm run t`
 
 #### &emsp;Back-end:
-- 
+- In a CLI, move into the *\dotnet\Portal\Portal.Test* folder and run the back-end tests
+    - `dotnet test`
 
 ### Interpreting code tests
