@@ -8,6 +8,62 @@
   - http://localhost:8080
 
 ## File/Folder Location
+    The files and folders should be arranged as follows: 
+    
+    ├── dotnet\                         
+        ├── Portal\
+            ├── Portal\
+                ├── Classes\                    
+                    ├── Area.cs                     
+                    ├── Endpoint.cs                 
+                    ├── MailSetting.cs              
+                    ├── Parameter.cs                
+                ├── Controllers\                
+                    ├── ExampleController.cs        
+                    ├── FormDataController.cs       
+                ├── Services\                   
+                    ├── EmailService.cs             
+                    ├── IEmailService.cs            
+                ├── ViewModels\                 
+                    ├── EmailFormViewModel.cs       
+                ├── Properties\launchSettings.json  
+                ├── appSettings.json            
+                ├── Portal.csproj               
+            ├── Portal.Test\                    
+                ├── ExampleControllerTest.cs        
+                ├── FormDataController.cs          
+                ├── testconfig.json                 
+                └── Portal.Test.csproj          
+            └── Portal.sln                      
+        └── Dockerfile                      
+    ├── vue\                            
+        ├── public\                         
+        ├── src\                            
+            ├── assets\                         
+            ├── components\                     
+                ├── Navbar                          
+                ├── Footer                          
+            ├── repositories\                   
+                ├── ExampleLocalRepository.js       
+                ├── ExampleRepository.js            
+                ├── FormDataRepository.js           
+                ├── Repository.js                   
+                ├── RepositoryFactory.js            
+            ├── router\                         
+                ├── index.js                        
+            ├── views\                          
+                ├── Administration.vue              
+                ├── Console.vue                     
+                ├── Home.vue                        
+                ├── Login.vue                       
+                ├── References.vue                  
+            ├── App.vue                         
+            ├── main.js                         
+        ├── tests\unit\                     
+            ├── Administration.spec.js      
+            ├── References.spec.js          
+        ├── Dockerfile                      
+        └── package.json        
 
 ## Starting/Stopping System Operations
 ### To start system operations...
@@ -27,12 +83,13 @@
 
 ### To stop system operations...
 #### &emsp;Back-end:
-- From the CLI, input the command 'CTRL+C' to halt the operation.
+- From the CLI runnig the back-end, input the command 'CTRL+C' to halt the operation.
 
 #### &emsp;Front-end:
-- From the CLI, input the command 'CTRL+C'. The CLI will ask the user if they want to terminate the batch job. Input the command 'Y' to halt the operation.
+- From the CLI running the front-end, input the command 'CTRL+C'. The CLI will ask the user if they want to terminate the batch job. Input the command 'Y' to halt the operation.
 
 ## Troubleshooting
+-
 
 ## Error Logging
 - Errors can be found logged in the CLI used to run the project.
