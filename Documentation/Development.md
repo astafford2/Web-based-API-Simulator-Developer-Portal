@@ -73,9 +73,9 @@
     [Truncated for brevity, only relevant folders/files were highlighted.]
 
 ## Important files
-**appSettings.json** - 
+**appSettings.json** - This file stores all of the configuration settings for the back-end
 
-**launchSettings.json** - 
+**launchSettings.json** - This files stores the launch configuration settings for the back-end including what port it will run on
 
 **package.json** - This file stores all dependencies needed for the project, dependencies are stored in json format with their name and version number to be installed by `npm`
 
@@ -107,6 +107,9 @@
     - `npm run serve`
 - The front-end should spin up, and in a browser you can go to http://localhost:8080 and see the front-end web application pages
 
+## Building and running with docker
+- Navigate to [The Development Portal Docker Repository](https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal-Docker) and follow the documentation in the README
+
 ### Running code tests
 #### &emsp;Front-end:
 - In a CLI, move into the *\vue* folder and run the front-end tests
@@ -120,21 +123,19 @@
 #### &emsp;Front-end:
 - After running the command `npm run t`, if the tests pass, they will have a checkmark next to them as shown below
 <br>
-<img src="VueTestsPass.PNG" width="300px" height="190x">
+<img src="VueTestsPass.PNG">
 <br>
-- If any of the tests fail it will look something similar to this
-<br>
-<img src="VueTestsFail.PNG" width="350px" height="280px">
-<br>
-    - In this instance, the test "add parameter button can be found" failed
+- "add parameter button can be found" tests if the add parameter button can be found on the parameter modal on the administration page
+- "parameter modal can be found" tests if the modal to add parameters can be found on the administration page
+- "it attempts to load" tests if the references page attempts to load information from the back-end
+- "it is not loaded" tests if the references page is not loaded before it gets the information from the back-end
+- "it loads the json response" tests if the references page can load the json data from the testing environment
+- "it displays the json response correctly" tests if the references page displays the json response correctly
 
 #### &emsp;Back-end:
 - After running the command `dotnet test`, if the tests pass the test window will look like this
 <br>
-<img src="DotnetTestsPass.PNG" width="510px" height="200px">
+<img src="DotnetTestsPass.PNG">
 <br>
-- If any of the tests fail, the test window will look something like this
-<br>
-<img src="DotnetTestsFail.PNG" width="510px" height="200px">
-<br>
-    - In this instance, the test method TestGetEndponts failed
+- The TestGetEndpoints test method tests the data configuration from the ExampleController controller
+- The TestGetEmailConfig test method tests the data configuraiton from the FormDataController controller
