@@ -28,7 +28,7 @@
                     ├── FormDataController.cs       # Web API controller that contains logic for sending an email to a specified reciever
                 ├── Services\                   # Folder containing all of the service in the back-end
                     ├── EmailService.cs             # Service that extends the IEmailService interface that lays out the body of the email to be sent
-                    ├── IEmailService.cs            # Interface that contains a task that asynchronously sends and email
+                    ├── IEmailService.cs            # Interface that contains a task that asynchronously sends an email
                 ├── ViewModels\                 # Folder containing all of the view models in the back-end
                     ├── EmailFormViewModel.cs       # View Model that contains the getters and setters for all of the elements to be sent in the email
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
