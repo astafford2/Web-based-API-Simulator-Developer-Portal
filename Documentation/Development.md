@@ -117,3 +117,24 @@
     - `dotnet test`
 
 ### Interpreting code tests
+#### &emsp;Front-end:
+- After running the command `npm run t`, if the tests pass, they will have a checkmark next to them as shown below
+<br>
+<img src="VueTestsPass.PNG">
+<br>
+- If any of the tests fail it will look something similar to this
+<br>
+<img src="VueTestsFail.PNG">
+<br>
+    - In this instance, the test "add parameter button can be found" failed
+
+#### &emsp;Back-end:
+- After running the command `dotnet test`, if the tests pass the test window will look like this
+<br>
+<img src="DotnetTestsPass.PNG">
+<br>
+- If any of the tests fail, the test window will look something like this
+<br>
+<img src="DotnetTestsFail.PNG">
+<br>
+    - In this instance, the test method TestGetEndponts failed
