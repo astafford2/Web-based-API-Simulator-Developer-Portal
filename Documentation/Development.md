@@ -1,6 +1,11 @@
 # Development Environment
 
 ## Technologies to Replicate
+<img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue>
+<img src=https://img.shields.io/badge/npm-v6.14.15-red>
+<img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
+<br><br>
+
 - `.NET 5 SDK v5.0.402`
 - `NodeJS v14.18.0` for `npm` usage
 - `Vue CLI v4.5.13`
