@@ -21,27 +21,27 @@
     ├── dotnet\                         # Back-end folder for all .NET files
         ├── Portal\
             ├── Portal\
-                ├── Classes\                    # Folder containing all classes in the back-end
-                    ├── Area.cs                     # Class laying out an area object (area in this instance is the object that each endpoint works with)
-                    ├── Endpoint.cs                 # Class laying out an API endpoint object
-                    ├── MailSetting.cs              # Class that gets and sets each form input that gets posted from the frontend
-                    ├── Parameter.cs                # Class laying out an endpoint parameter object
-                ├── Controllers\                # Folder containing all the controllers in the back-end
-                    ├── ExampleController.cs        # Web API controller that contains the example API endpoint that we are displaying in the frontend
-                    ├── FormDataController.cs       # Web API controller that contains logic for sending an email to a specified reciever
-                ├── Services\                   # Folder containing all of the service in the back-end
-                    ├── EmailService.cs             # Service that extends the IEmailService interface that lays out the body of the email to be sent
-                    ├── IEmailService.cs            # Interface that contains a task that asynchronously sends an email
-                ├── ViewModels\                 # Folder containing all of the view models in the back-end
-                    ├── EmailFormViewModel.cs       # View Model that contains the getters and setters for all of the elements to be sent in the email
+                ├── Classes\                        # Folder containing all classes in the back-end
+                    ├── Area.cs                         # Class laying out an area object (area in this instance is the object that each endpoint works with)
+                    ├── Endpoint.cs                     # Class laying out an API endpoint object
+                    ├── MailSetting.cs                  # Class that gets and sets each form input that gets posted from the frontend
+                    ├── Parameter.cs                    # Class laying out an endpoint parameter object
+                ├── Controllers\                    # Folder containing all the controllers in the back-end
+                    ├── ExampleController.cs            # Web API controller that contains the example API endpoint that we are displaying in the frontend
+                    ├── FormDataController.cs           # Web API controller that contains logic for sending an email to a specified reciever
+                ├── Services\                       # Folder containing all of the service in the back-end
+                    ├── EmailService.cs                 # Service that extends the IEmailService interface that lays out the body of the email to be sent
+                    ├── IEmailService.cs                # Interface that contains a task that asynchronously sends an email
+                ├── ViewModels\                     # Folder containing all of the view models in the back-end
+                    ├── EmailFormViewModel.cs           # View Model that contains the getters and setters for all of the elements to be sent in the email
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
-                ├── appSettings.json            # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
-                ├── Portal.csproj               # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
+                ├── appSettings.json                # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
+                ├── Portal.csproj                   # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
             ├── Portal.Test\                    # Folder containing all of the test classes in the back-end
                 ├── ExampleControllerTest.cs        # Class of unit tests for the ExampleController.cs controller
                 ├── FormDataController.cs           # Class of unit tests for the FormDataController.cs controller
                 ├── testconfig.json                 # Json file that holds the information for the testing environment
-                └── Portal.Test.csproj          # C# project that contains all of the test classes and the testconfig.json file
+                └── Portal.Test.csproj              # C# project that contains all of the test classes and the testconfig.json file
             └── Portal.sln                      # Contains information about what needs to be compiled
         └── Dockerfile                      # Dockerfile to build back-end development image
     ├── vue\                            # Front-end folder for all vue files
@@ -68,8 +68,8 @@
             ├── App.vue                         # Main HTML template for Vue pages
             ├── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
         ├── tests\unit\                     # Test folder for vue files
-            ├── Administration.spec.js      # JavaScript file containing the unit tests for Administration.vue
-            ├── References.spec.js          # JavaScript file containing the unit tests for References.vue
+            ├── Administration.spec.js          # JavaScript file containing the unit tests for Administration.vue
+            ├── References.spec.js              # JavaScript file containing the unit tests for References.vue
         ├── Dockerfile                      # Dockerfile to build front-end development image
         └── package.json                    # JSON file to store vue config data and npm script aliases
 
