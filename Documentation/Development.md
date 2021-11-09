@@ -121,6 +121,7 @@
 #### &emsp;Back-end:
 - In a CLI, move into the *\dotnet\Portal\Portal.Test* folder and run the back-end tests
     - `dotnet test`
+- Tesing from **Visual Studio 2019** is also possible. In the IDE, right click on the Portal.Test project and select "Run Tests"
 
 ### Interpreting code tests
 #### &emsp;Front-end:
