@@ -7,63 +7,14 @@
   #### Front-end
   - http://localhost:8080
 
-## File/Folder Location
-    The files and folders should be arranged as follows: 
-    
-    ├── dotnet\                         
-        ├── Portal\
-            ├── Portal\
-                ├── Classes\                    
-                    ├── Area.cs                     
-                    ├── Endpoint.cs                 
-                    ├── MailSetting.cs              
-                    ├── Parameter.cs                
-                ├── Controllers\                
-                    ├── ExampleController.cs        
-                    ├── FormDataController.cs       
-                ├── Services\                   
-                    ├── EmailService.cs             
-                    ├── IEmailService.cs            
-                ├── ViewModels\                 
-                    ├── EmailFormViewModel.cs       
-                ├── Properties\launchSettings.json  
-                ├── appSettings.json            
-                ├── Portal.csproj               
-            ├── Portal.Test\                    
-                ├── ExampleControllerTest.cs        
-                ├── FormDataController.cs          
-                ├── testconfig.json                 
-                └── Portal.Test.csproj          
-            └── Portal.sln                      
-        └── Dockerfile                      
-    ├── vue\                            
-        ├── public\                         
-        ├── src\                            
-            ├── assets\                         
-            ├── components\                     
-                ├── Navbar                          
-                ├── Footer                          
-            ├── repositories\                   
-                ├── ExampleLocalRepository.js       
-                ├── ExampleRepository.js            
-                ├── FormDataRepository.js           
-                ├── Repository.js                   
-                ├── RepositoryFactory.js            
-            ├── router\                         
-                ├── index.js                        
-            ├── views\                          
-                ├── Administration.vue              
-                ├── Console.vue                     
-                ├── Home.vue                        
-                ├── Login.vue                       
-                ├── References.vue                  
-            ├── App.vue                         
-            ├── main.js                         
-        ├── tests\unit\                     
-            ├── Administration.spec.js      
-            ├── References.spec.js          
-        ├── Dockerfile                      
-        └── package.json        
+## Installation and Setup
+#### Prerequisites
+  - Ensure the following are installed before cloning the repository:
+  
+     - <img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue>
+     - <img src=https://img.shields.io/badge/npm-v6.14.15-red>
+     - <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
+  - Once installed, clone the project repository into a folder of your choosing.
 
 ## Starting/Stopping System Operations
 ### To start system operations...
