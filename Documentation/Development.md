@@ -128,17 +128,21 @@
 <br>
 <img src="DocumentationImages/VueTestsPass.PNG">
 <br>
-- "add parameter button can be found" tests if the add parameter button can be found on the parameter modal on the administration page
-- "parameter modal can be found" tests if the modal to add parameters can be found on the administration page
-- "it attempts to load" tests if the references page attempts to load information from the back-end
-- "it is not loaded" tests if the references page is not loaded before it gets the information from the back-end
-- "it loads the json response" tests if the references page can load the json data from the testing environment
-- "it displays the json response correctly" tests if the references page displays the json response correctly
+<ul>
+    <li>"add parameter button can be found" tests if the add parameter button can be found on the parameter modal on the administration page
+    <li>"parameter modal can be found" tests if the modal to add parameters can be found on the administration page
+    <li>"it attempts to load" tests if the references page attempts to load information from the back-end
+    <li>"it is not loaded" tests if the references page is not loaded before it gets the information from the back-end
+    <li>"it loads the json response" tests if the references page can load the json data from the testing environment
+    <li>"it displays the json response correctly" tests if the references page displays the json response correctly
+</ul>
 
 #### &emsp;Back-end:
 - After running the command `dotnet test`, if the tests pass the test window will look like this
 <br>
 <img src="DocumentationImages/DotnetTestsPass.PNG">
 <br>
-- The TestGetEndpoints test method tests the data configuration from the ExampleController controller
-- The TestGetEmailConfig test method tests the data configuraiton from the FormDataController controller
+<ul>
+    <li>The TestGetEndpoints test method tests the data configuration from the ExampleController controller
+    <li>The TestGetEmailConfig test method tests the data configuraiton from the FormDataController controller
+</ul>
