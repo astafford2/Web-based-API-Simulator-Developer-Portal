@@ -24,15 +24,21 @@ On the login page, the user will have the option to log in or request access. Lo
 
 On the references page, the user will be able to see all of the endpoints of the Example API as well as their parameters. The user has the option to click the links to both the object that the endpoint works with as well as the specific endpoint and be taken down the page to where that object or endpoint is. After reaching the bottom of the page the user will have the option to click the "back to top" link and be taken back to the top of the page. In future versions we will be connecting to the Cheetah API, meaning that actual endpoints featured in Cheetah API will be featured will be featured on this page.
 
+- <b>Home:</b> Goes back to the starting page where you would need to go back throgh the login page
+
 ---
 ### - Console Page
 
 The console page has been set up layout-wise but does not have any functionality currently. In future versions we will be moving into giving this page funcitonality or perhaps merging the console onto the references page in the form of a card view.
 
+- <b>Home:</b> Goes back to the starting page where you would need to go back throgh the login page
+
 ---
 ### - Administration Page 
 
 On the administration page, the general functioning currently set up for this page is adding a parameter. On the page, there is an object selection bar that allows you to select an object. To use the add parameter button, the user must choose "example object one" in the selection bar. When you click the add parameter button, a modal will display requesting user input. The user can then fill in the information for the modal, including the parameter name, description, type through the selection bar, and say whether it is is required or not through the checkbox. The user can click outside of the modal to close it, or they can fill out the basic information for the parameter and click the save button to close it and save the parameter information. The modal will not close unless the parameter has a name and a parameter type is selected. Not filling this out will cause the save button in the modal to be disabled. The general parameter information also is added to the table of the administration page.
+
+- <b>Home:</b> Goes back to the starting page where you would need to go back throgh the login page
 
 ---
 #### Pages Dropdown Menu (Featured on the Reference, Console, and Administration pages):
