@@ -81,7 +81,7 @@
 
 **Dockerfiles** - Dockerfiles are used to build the development images for both front and back-end; these are mostly used with the Docker repo and docker-compose, but can be built by themselves
 
-## Testing the Environment
+## Replicating / Testing the Environment
 ### Building and running
 - Clone the project repository from BitBucket
     - `git clone https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/ bsu.developer-portal`
