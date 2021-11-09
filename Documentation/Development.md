@@ -126,7 +126,7 @@
 #### &emsp;Front-end:
 - After running the command `npm run t`, if the tests pass, they will have a checkmark next to them as shown below
 <br>
-<img src="VueTestsPass.PNG">
+<img src="DocumentationImages/VueTestsPass.PNG">
 <br>
 - "add parameter button can be found" tests if the add parameter button can be found on the parameter modal on the administration page
 - "parameter modal can be found" tests if the modal to add parameters can be found on the administration page
@@ -138,7 +138,7 @@
 #### &emsp;Back-end:
 - After running the command `dotnet test`, if the tests pass the test window will look like this
 <br>
-<img src="DotnetTestsPass.PNG">
+<img src="DocumentationImages/DotnetTestsPass.PNG">
 <br>
 - The TestGetEndpoints test method tests the data configuration from the ExampleController controller
 - The TestGetEmailConfig test method tests the data configuraiton from the FormDataController controller
