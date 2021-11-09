@@ -11,9 +11,12 @@
 #### Prerequisites
   - Ensure the following are installed before cloning the repository:
   
-     - <img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue>
-     - <img src=https://img.shields.io/badge/npm-v6.14.15-red>
-     - <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
+  - <img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue> <br>
+     - `.NET 5 SDK v5.0.402`
+  - <img src=https://img.shields.io/badge/npm-v6.14.15-red> <br>
+     - `NodeJS v14.18.0 for npm usage`
+  - <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen> <br>
+     - `Vue CLI v4.5.13`
   - Once installed, clone the Bitbucket project repository (https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/) into a folder of your choosing.
 
 ## Starting/Stopping System Operations
