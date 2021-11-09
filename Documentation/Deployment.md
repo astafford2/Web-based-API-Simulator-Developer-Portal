@@ -96,6 +96,6 @@
 
 ## Critical Sections
 - The critical sections that are mostly likely to fail are in the Request Access section of the Login page.
-- When filling out the Request Access form, ensure that each field in the form is filled out. If any field is left blank, the access request may not properly send and the user may receive an error.
-- The email sent after submitting the Request Access form may fail to send. Ensure that '"Enabled": true' is set in 'dotnet/Portal/Portal/appsettings.json'--if 'Enabled' is set to 'false', the email will silently fail to send.
+    - When filling out the Request Access form, ensure that each field in the form is filled out. If any field is left blank, the access request may not properly send and the user may receive an error.
+    - The email sent after submitting the Request Access form may fail to send. Ensure that '"Enabled": true' is set in 'dotnet/Portal/Portal/appsettings.json'--if 'Enabled' is set to 'false', the email will silently fail to send.
 - If the References page displays "Loading..." while accessing the page, the back-end may not be running properly. Ensure that the back-end is functional and running before accessing the References page.
