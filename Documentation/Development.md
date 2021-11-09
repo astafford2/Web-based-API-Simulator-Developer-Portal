@@ -7,6 +7,11 @@
 - `NodeJS` for `npm` usage
 - `Vue CLI`
 
+## Tech Aspects
+- `.NET SDK version 5.0.402`
+- `Vue CLI version 4.5.13`
+- `NodeJS version 14.18.0`
+
 ## Required IDEs
 - IDEs used for development
     - **Visual Studio 2019** - back-end development
