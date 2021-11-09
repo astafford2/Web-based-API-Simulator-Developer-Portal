@@ -11,7 +11,7 @@ Opening the software, you will start at the home page, which provides some of th
 ---
 ### - Login Page
 
-On the login page, the user will have the option to log in or request access. Login so far has been set up where the user only needs to press the gain access button to be taken to the next page which is the references page. However if the user selects the Request Access button, they will be given a form to fill out that will send an email to an email address specified in the back-end. The email will contain the information gathered from the form. After filling out the form, the user can click the Submit Form button and the email will be sent.
+On the login page, the user will have the option to log in or request access. Login so far has been set up where the user only needs to press the gain access button to be taken to the next page which is the references page. However if the user selects the Request Access button, they will be given a form to fill out that will send an email to an email address specified in the back-end. The email will contain the information gathered from the form. After filling out the form, the user can click the Submit Form button and the email will be sent. Currently, to send an email the "Enabled" option in the appSettings.json file in the backend needs to be set to true.
 
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page where you would need to go back throgh the login page
