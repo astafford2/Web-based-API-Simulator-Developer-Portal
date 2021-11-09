@@ -14,7 +14,7 @@
      - <img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue>
      - <img src=https://img.shields.io/badge/npm-v6.14.15-red>
      - <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
-  - Once installed, clone the project repository into a folder of your choosing.
+  - Once installed, clone the Bitbucket project repository (https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/) into a folder of your choosing.
 
 ## Starting/Stopping System Operations
 ### To start system operations...
