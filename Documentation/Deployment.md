@@ -89,10 +89,13 @@
 - From the CLI running the front-end, input the command 'CTRL+C'. The CLI will ask the user if they want to terminate the batch job. Input the command 'Y' to halt the operation.
 
 ## Troubleshooting
--
+- 
 
 ## Error Logging
 - Errors can be found logged in the CLI used to run the project.
 
 ## Critical Sections
-- 
+- The critical sections that are mostly likely to fail are in the Request Access section of the Login page.
+    - When filling out the Request Access form, ensure that each field in the form is filled out. If any field is left blank, the access request may not properly send and the user may receive an error.
+    - The email sent after submitting the Request Access form may fail to send. Ensure that '"Enabled": true' is set in 'dotnet/Portal/Portal/appsettings.json'--if 'Enabled' is set to 'false', the email will silently fail to send.
+- If the References page displays "Loading..." while accessing the page, the back-end may not be running properly. Ensure that the back-end is functional and running before accessing the References page.
