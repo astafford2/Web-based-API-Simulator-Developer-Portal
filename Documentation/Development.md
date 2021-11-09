@@ -1,16 +1,9 @@
 # Development Environment
 
-## Tech Aspects
-
 ## Technologies to Replicate
-- `.NET 5 SDK`
-- `NodeJS` for `npm` usage
-- `Vue CLI`
-
-## Tech Aspects
-- `.NET SDK version 5.0.402`
-- `Vue CLI version 4.5.13`
-- `NodeJS version 14.18.0`
+- `.NET 5 SDK v5.0.402`
+- `NodeJS v14.18.0` for `npm` usage
+- `Vue CLI v4.5.13`
 
 ## Required IDEs
 - IDEs used for development
