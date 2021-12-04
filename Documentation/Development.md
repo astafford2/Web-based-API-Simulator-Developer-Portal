@@ -110,7 +110,17 @@
     - `npm run serve`
 - The front-end should spin up, and in a browser you can go to http://localhost:8080 and see the front-end web application pages
 
-## Building and running with docker
+### Building and running with Docker
+- Run the following docker-compose command in the root folder of the repository (where docker-compose.yml is):
+    - `docker-compose up --build`
+    - This might take some time for the initial build.
+    - If Docker prompts to share folder(s), confirm them.
+- If you want to rebuild from scratch, try using --nocache option.
+    - `docker-compose build --no-cache`
+    - Then running `docker-compose up`
+
+***OR***
+
 - Navigate to [The Development Portal Docker Repository](https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal-Docker) and follow the documentation in the README
 
 ### Running code tests
