@@ -43,6 +43,10 @@
 - Then, move into the *\bin\Debug\net5.0* folder to run the .dll
     - `dotnet run Portal.dll`
 - The back-end should spin up, and in a browser you can go to http://localhost:5000 and should see the back-end swagger page
+**OR**
+- Open the project solution in Visual studio 2019
+    - Select `Portal` from run dropdown menu and click the run button
+    - http://localhost:5000 will open in your default browser
 
 #### &emsp;Front-end:
 - In a CLI, move into the *\vue* folder and first install the dependencies
@@ -50,6 +54,11 @@
 - Then, in the same folder, start the front-end with npm
     - `npm run serve`
 - The front-end should spin up, and in a browser you can go to http://localhost:8080 and see the front-end web application pages
+**OR**
+- Open the `vue` folder in Visual Studio Code
+    - Hit `Ctrl + ~` to open a shell in the vue folder
+    - Run the command `npm run serve`
+    - Navigate to http://localhost:8080
 
 ### To stop system operations...
 #### &emsp;Back-end:
