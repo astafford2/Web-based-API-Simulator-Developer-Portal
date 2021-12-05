@@ -9,18 +9,18 @@
 
 ## Installation and Setup
 #### Prerequisites
-  - Ensure the following are installed before cloning the repository:
-  
-  - <img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue> <br>
-     - `.NET 5 SDK v5.0.402`
-  - <img src=https://img.shields.io/badge/npm-v6.14.15-red> <br>
-     - `NodeJS v14.18.0 for npm usage`
-  - <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen> <br>
-     - `Vue CLI v4.5.13`
-  - <img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%202019-v15.0.2000.5-blueviolet> <br>
-     - `Microsoft SQL Server 2019 v15.0.2000.5 for database support`
-  - <img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%20Management%20Studio%2018-v18.9.2-purple> <br>
-     - `Microsoft SQL Server Management Studio 18 v18.9.2 for database management`
+  - Ensure the following are installed before cloning the repository: <br>
+<img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue>
+<img src=https://img.shields.io/badge/npm-v6.14.15-red>
+<img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
+<img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%202019-v15.0.2000.5-blueviolet>
+<img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%20Management%20Studio%2018-v18.9.2-purple>
+<br>
+    - `.NET 5 SDK v5.0.402`
+    - `NodeJS v14.18.0` for `npm` usage
+    - `Vue CLI v4.5.13`
+    - `Microsoft SQL Server 2019 v15.0.2000.5 for database support`
+    - `Microsoft SQL Server Management Studio 18 v18.9.2 for database management`
   - Once installed, clone the Bitbucket project repository (https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/) into a folder of your choosing.
 
 ## Starting/Stopping System Operations
