@@ -4,6 +4,8 @@
 <img src=https://img.shields.io/badge/.NET%205-v5.0.402-blue>
 <img src=https://img.shields.io/badge/npm-v6.14.15-red>
 <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
+<img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%202019-v15.0.2000.5-blueviolet>
+<img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%20Management%20Studio%2018-v18.9.2-purple>
 <br><br>
 
 - `.NET 5 SDK v5.0.402`
@@ -95,6 +97,18 @@
     - Again, make sure to downlaod the correct installer for your machine
 - After installing node, open a CLI of your choice, run the following command to install Vue CLI
     - `npm install -g @vue/cli`
+
+#### &emsp;Database:
+- Open SQL server management studio and connect to your Desktop server
+- Right click on `Databases` and select `Restore Database`
+- Select the radio button labeled `Device` and click the `Browse (...)` button next to the input box
+- In the window that comes up, select `File` from the dropdown menu
+- Select any existing paths in the `Browse Media` box and click `Remove`
+- Select `Add`
+- Find the project repository in the file structure that comes up, select the `Cheetah.bak` database backup file, and select `Ok`
+- Select the `Cheetah.bak` file path in the `Browse Media` box and click `Ok`
+- In the restore database window, write `Cheetah` in the database input box if it's not already inputed
+- Click `Ok` to restore the Cheetah database from the backup file
 
 #### &emsp;Back-end:
 - In a CLI, move into the *\dotnet\Portal\Portal* folder and first build the project .dll
