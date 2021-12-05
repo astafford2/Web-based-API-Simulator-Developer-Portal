@@ -11,6 +11,8 @@
 - `.NET 5 SDK v5.0.402`
 - `NodeJS v14.18.0` for `npm` usage
 - `Vue CLI v4.5.13`
+- `Microsoft SQL Server 2019 v15.0.2000.5 for database support`
+- `Microsoft SQL Server Management Studio 18 v18.9.2 for database management`
 
 ## Required IDEs
 - IDEs used for development
