@@ -58,6 +58,24 @@
 #### &emsp;Front-end:
 - From the CLI running the front-end, input the command 'CTRL+C'. The CLI will ask the user if they want to terminate the batch job. Input the command 'Y' to halt the operation.
 
+## Starting/Stopping System Operations with Docker
+### To start system operations...
+- Run the following docker-compose command in the root folder of the repository (where docker-compose.yml is):
+    - `docker-compose up --build`
+    - This might take some time for the initial build.
+    - If Docker prompts to share folder(s), confirm them.
+- If you want to rebuild from scratch, try using --nocache option.
+    - `docker-compose build --no-cache`
+    - Then running `docker-compose up`
+- To restore the Cheetah.bak database backup into the `dev-portal-db` container...
+    - Open a new CLI or shell
+    - Copy the backup file into the container with the command `docker cp "./databases/Cheetah.bak" dev-portal-db:var/opt/mssql`
+    - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
+    - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
+    - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
+    - Run the SQL query `RESTORE DATABASE [Cheetah] FROM DISK='/var/opt/mssql/Cheetah.bak' WITH MOVE 'Cheetah' TO '/var/opt/mssql/data/Cheetah.mdf', MOVE 'Cheetah_log' TO '/var/opt/mssql/data/Cheetah_log.ldf'` and hit enter
+    - Type `GO` into the SQL command and hit enter to restore the database from the Cheetah.bak database backup file
+
 ## Troubleshooting
 - In case of an issue, consult the following steps to properly troubleshoot the issue:
     - Ensure the back-end and front-end are both running properly (see the Starting/Stopping System Operations section for more detail).

@@ -91,6 +91,8 @@
 - Clone the project repository from BitBucket
     - `git clone https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/ bsu.developer-portal`
 #### &emsp;Gathering required technologies:
+- Download Microsoft SQL Server 2019 from [microsoft.com](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- Download Microsoft SQL Server Management Studio 18 from [docs.microsoft.com](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
 - Download .NET 5 SDK from [dotnet.microsoft.com](https://dotnet.microsoft.com/download/dotnet/5.0)
     - Make sure to download the correct SDK for your machine (Windows, Linux, Mac)
 - Download the latest LTS of Node.js from [nodejs.org](https://nodejs.org/en/download/)
@@ -132,12 +134,29 @@
 - If you want to rebuild from scratch, try using --nocache option.
     - `docker-compose build --no-cache`
     - Then running `docker-compose up`
-
-***OR***
-
-- Navigate to [The Development Portal Docker Repository](https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal-Docker) and follow the documentation in the README
+- To restore the Cheetah.bak database backup into the `dev-portal-db` container...
+    - Open a new CLI or shell
+    - Copy the backup file into the container with the command `docker cp "./databases/Cheetah.bak" dev-portal-db:var/opt/mssql`
+    - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
+    - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
+    - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
+    - Run the SQL query `RESTORE DATABASE [Cheetah] FROM DISK='/var/opt/mssql/Cheetah.bak' WITH MOVE 'Cheetah' TO '/var/opt/mssql/data/Cheetah.mdf', MOVE 'Cheetah_log' TO '/var/opt/mssql/data/Cheetah_log.ldf'` and hit enter
+    - Type `GO` into the SQL command and hit enter to restore the database from the Cheetah.bak database backup file
 
 ### Running code tests
+#### &emsp;Test Database:
+- Running tests for the backend relies on having a working copy of the CheetahTest database
+    - Open SQL server management studio and connect to your Desktop server
+    - Right click on `Databases` and select `Restore Database`
+    - Select the radio button labeled `Device` and click the `Browse (...)` button next to the input box
+    - In the window that comes up, select `File` from the dropdown menu
+    - Select any existing paths in the `Browse Media` box and click `Remove`
+    - Select `Add`
+    - Find the project repository in the file structure that comes up, select the `CheetahTest.bak` database backup file, and select `Ok`
+    - Select the `CheetahTest.bak` file path in the `Browse Media` box and click `Ok`
+    - In the restore database window, write `CheetahTest` in the database input box if it's not already inputed
+    - Click `Ok` to restore the CheetahTest database from the backup file
+
 #### &emsp;Front-end:
 - In a CLI, move into the *\vue* folder and run the front-end tests
     - `npm run t`
