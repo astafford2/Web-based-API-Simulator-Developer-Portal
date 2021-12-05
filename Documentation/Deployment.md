@@ -76,6 +76,12 @@
     - Run the SQL query `RESTORE DATABASE [Cheetah] FROM DISK='/var/opt/mssql/Cheetah.bak' WITH MOVE 'Cheetah' TO '/var/opt/mssql/data/Cheetah.mdf', MOVE 'Cheetah_log' TO '/var/opt/mssql/data/Cheetah_log.ldf'` and hit enter
     - Type `GO` into the SQL command and hit enter to restore the database from the Cheetah.bak database backup file
 
+### To stop system operations...
+- Change directory to the root folder of the repository (where docker-compose.yml is):
+    - `docker stop bsudeveloper-portal` to stop the containers
+    **OR**
+    - Open Docker Desktop and click the stop button on each container individually or the root container
+
 ## Troubleshooting
 - In case of an issue, consult the following steps to properly troubleshoot the issue:
     - Ensure the back-end and front-end are both running properly (see the Starting/Stopping System Operations section for more detail).
@@ -87,7 +93,7 @@
 - Errors can be found logged in the CLI used to run the project.
 
 ## Critical Sections
-- The critical sections that are mostly likely to fail are in the Request Access section of the Login page.
+- The critical sections that are mostly likely to fail are in the Request Access section of the Login page and the loading of data stored in the Database.
     - When filling out the Request Access form, ensure that each field in the form is filled out. If any field is left blank, the access request may not properly send and the user may receive an error.
     - The email sent after submitting the Request Access form may fail to send. Ensure that '"Enabled": true' is set in 'dotnet/Portal/Portal/appsettings.json'--if 'Enabled' is set to 'false', the email may fail to send.
-- If the References page displays "Loading..." while accessing the page, the back-end may not be running properly. Ensure that the back-end is functional and running before accessing the References page.
+- If the References page displays a spinner and does not load information in a reasonable amount of time, more than likely the database backup file was not restored correctly. Ensure that the database can be seen in SQL Server Management Studio and that queries can be run on it.
