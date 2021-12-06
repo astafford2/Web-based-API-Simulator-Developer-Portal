@@ -27,15 +27,15 @@
 ## Starting/Stopping System Operations
 ### To start system operations...
 #### &emsp;Database:
-- Open SQL server management studio and connect to your Desktop server
+- Open SQL Server Management Studio and connect to your Desktop server
 - Right click on `Databases` and select `Restore Database`
 - Select the radio button labeled `Device` and click the `Browse (...)` button next to the input box
 - In the window that comes up, select `File` from the dropdown menu
 - Select any existing paths in the `Browse Media` box and click `Remove`
 - Select `Add`
-- Find the project repository in the file structure that comes up, select the `Cheetah.bak` database backup file, and select `Ok`
-- Select the `Cheetah.bak` file path in the `Browse Media` box and click `Ok`
-- In the restore database window, write `Cheetah` in the database input box if it's not already inputed
+- Find the project repository in the file structure that comes up, select the 'Cheetah.bak' database backup file, and select `Ok`
+- Select the 'Cheetah.bak' file path in the `Browse Media` box and click `Ok`
+- In the restore database window, write 'Cheetah' in the database input box if it's not already inputed
 - Click `Ok` to restore the Cheetah database from the backup file
 
 #### &emsp;Back-end:

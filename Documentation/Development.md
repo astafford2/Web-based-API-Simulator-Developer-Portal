@@ -135,15 +135,15 @@
     - `npm install -g @vue/cli`
 
 #### &emsp;Database:
-- Open SQL server management studio and connect to your Desktop server
+- Open SQL Server Management Studio and connect to your Desktop server
 - Right click on `Databases` and select `Restore Database`
 - Select the radio button labeled `Device` and click the `Browse (...)` button next to the input box
 - In the window that comes up, select `File` from the dropdown menu
 - Select any existing paths in the `Browse Media` box and click `Remove`
 - Select `Add`
-- Find the project repository in the file structure that comes up, select the `Cheetah.bak` database backup file, and select `Ok`
-- Select the `Cheetah.bak` file path in the `Browse Media` box and click `Ok`
-- In the restore database window, write `Cheetah` in the database input box if it's not already inputed
+- Find the project repository in the file structure that comes up, select the 'Cheetah.bak' database backup file, and select `Ok`
+- Select the 'Cheetah.bak' file path in the `Browse Media` box and click `Ok`
+- In the restore database window, write 'Cheetah' in the database input box if it's not already inputed
 - Click `Ok` to restore the Cheetah database from the backup file
 
 #### &emsp;Back-end:
@@ -153,8 +153,8 @@
     - `dotnet run Portal.dll`
 - The back-end should spin up, and in a browser you can go to http://localhost:5000 and should see the back-end swagger page
 **OR**
-- Open the project solution in Visual studio 2019
-    - Select `Portal` from run dropdown menu and click the run button
+- Open the project solution in Visual Studio 2019
+    - Select 'Portal' from the run dropdown menu and click the run button
     - http://localhost:5000 will open in your default browser
 
 #### &emsp;Front-end:
@@ -165,7 +165,7 @@
 - The front-end should spin up, and in a browser you can go to http://localhost:8080 and see the front-end web application pages
 **OR**
 - Open the `vue` folder in Visual Studio Code
-    - Hit `Ctrl + ~` to open a shell in the vue folder
+    - Hit 'Ctrl + ~' to open a shell in the vue folder
     - Run the command `npm run serve`
     - Navigate to http://localhost:8080
 
@@ -189,16 +189,16 @@
 ### Running code tests
 #### &emsp;Test Database:
 - Running tests for the backend relies on having a working copy of the CheetahTest database
-    - Open SQL server management studio and connect to your Desktop server
+    - Open SQL Server Management Studio and connect to your Desktop server
     - Right click on `Databases` and select `Restore Database`
     - Select the radio button labeled `Device` and click the `Browse (...)` button next to the input box
     - In the window that comes up, select `File` from the dropdown menu
     - Select any existing paths in the `Browse Media` box and click `Remove`
     - Select `Add`
-    - Find the project repository in the file structure that comes up, select the `CheetahTest.bak` database backup file, and select `Ok`
-    - Select the `CheetahTest.bak` file path in the `Browse Media` box and click `Ok`
-    - In the restore database window, write `CheetahTest` in the database input box if it's not already inputed
-    - Click `Ok` to restore the CheetahTest database from the backup file
+    - Find the project repository in the file structure that comes up, select the 'CheetahTest.bak' database backup file, and select `Ok`
+    - Select the 'CheetahTest.bak' file path in the `Browse Media` box and click `Ok`
+    - In the restore database window, write 'CheetahTest' in the database input box if it's not already inputed
+    - Click `Ok` to restore the Cheetah database from the backup file
 
 #### &emsp;Front-end:
 - In a CLI, move into the *\vue* folder and run the front-end tests
