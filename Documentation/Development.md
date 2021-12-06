@@ -25,57 +25,89 @@
     ├── dotnet\                         # Back-end folder for all .NET files
         ├── Portal\
             ├── Portal\
-                ├── Classes\                        # Folder containing all classes in the back-end
+                ├── Classes\
                     ├── Area.cs                         # Class laying out an area object (area in this instance is the object that each endpoint works with)
                     ├── Endpoint.cs                     # Class laying out an API endpoint object
                     ├── MailSetting.cs                  # Class that gets and sets each form input that gets posted from the frontend
-                    ├── Parameter.cs                    # Class laying out an endpoint parameter object
-                ├── Controllers\                    # Folder containing all the controllers in the back-end
-                    ├── ExampleController.cs            # Web API controller that contains the example API endpoint that we are displaying in the frontend
+                    └── Parameter.cs                    # Class laying out an endpoint parameter object
+                ├── Controllers\
+                    ├── AreaController.cs               # ***INFO FOR THESE***
+                    ├── EndpointController.cs           # ***INFO FOR THESE***
                     ├── FormDataController.cs           # Web API controller that contains logic for sending an email to a specified reciever
-                ├── Services\                       # Folder containing all of the service in the back-end
-                    ├── EmailService.cs                 # Service that extends the IEmailService interface that lays out the body of the email to be sent
+                    ├── LoginController.cs              # Web API controller that contains logic for logging in through Cheetah calls
+                    └── ParameterController.cs          # ***INFO FOR THESE***
+                ├── Models\
+                    ├── Area.cs                         # ***INFO FOR THESE***
+                    ├── CheetahContext.cs               # ***INFO FOR THESE***
+                    ├── Endpoint.cs                     # ***INFO FOR THESE***
+                    ├── LoginResponse.cs                # ***INFO FOR THESE***
+                    ├── Parameter.cs                    # ***INFO FOR THESE***
+                    └── SelectListOption.cs             # ***INFO FOR THESE***
+                ├── Services\
+                    ├── AreaService.cs                  # ***INFO FOR THESE***
+                    ├── EmailService.cs                 # Service that extends the IEmailService interface and lays out the body of the email to be sent
+                    ├── EndpointService.cs              # ***INFO FOR THESE***
+                    ├── IAreaService.cs                 # ***INFO FOR THESE***
                     ├── IEmailService.cs                # Interface that contains a task that asynchronously sends an email
-                ├── ViewModels\                     # Folder containing all of the view models in the back-end
+                    ├── IEndpointService.cs             # ***INFO FOR THESE***
+                    ├── ILoginService.cs                # Interface that contains tasks to asynchronously login to Cheetah servers
+                    ├── IParameterService.cs            # ***INFO FOR THESE***
+                    └── LoginService.cs                 # Service that extends the ILoginService interface and lays out methods for logging in
+                    └── ParameterService.cs             # ***INFO FOR THESE***
+                ├── ViewModels\
+                    ├── AreaViewModel.cs                # ***INFO FOR THESE***
                     ├── EmailFormViewModel.cs           # View Model that contains the getters and setters for all of the elements to be sent in the email
+                    ├── EndpointViewModel.cs            # ***INFO FOR THESE***
+                    ├── LoginViewModel.cs               # ***INFO FOR THESE***
+                    ├── ParameterViewModel.cs           # ***INFO FOR THESE***
+                    ├── SelectListOptionViewModel.cs    # ***INFO FOR THESE***
+                    └── SidebarViewModel.cs             # ***INFO FOR THESE***
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
                 ├── appSettings.json                # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
-                ├── Portal.csproj                   # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
-            ├── Portal.Test\                    # Folder containing all of the test classes in the back-end
-                ├── ExampleControllerTest.cs        # Class of unit tests for the ExampleController.cs controller
+                └── Portal.csproj                   # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
+            ├── Portal.Test\
+                ├── AreaServiceTest.cs              # Class of unit tests for the AreaService.cs service
                 ├── FormDataController.cs           # Class of unit tests for the FormDataController.cs controller
+                ├── LoginServiceTests.cs            # Class of unit tests for the LoginService.cs service
                 ├── testconfig.json                 # Json file that holds the information for the testing environment
                 └── Portal.Test.csproj              # C# project that contains all of the test classes and the testconfig.json file
             └── Portal.sln                      # Contains information about what needs to be compiled
-        └── Dockerfile                      # Dockerfile to build back-end development image
+        ├── Dockerfile                      # Dockerfile to build back-end development image
+        └── DockerfileExternal              # Dockerfile to build back-end development image through an external repository
     ├── vue\                            # Front-end folder for all vue files
         ├── public\                         # Files that are served raw and accessible in its plain URL
         ├── src\                            # Source files for vue front-end
             ├── assets\                         # Asset files for the vue front-end
             ├── components\                     # HTML components to import in vue files
-                ├── Navbar                          # Component that contains HTML for the navigation bar featured on App.vue
-                ├── Footer                          # Component that contains HTML for the footer featured on App.vue 
+                ├── Navbar.vue                      # Component that contains HTML for the navigation bar featured on App.vue
+                ├── Footer.vue                      # Component that contains HTML for the footer featured on App.vue
+                └── Sidebar.vue                     # Component that contains HTML for the References sidebar
             ├── repositories\                   # Folder containing repository pattern Javascript files
-                ├── ExampleLocalRepository.js       # Javascript file containing the mock data for unit testing
-                ├── ExampleRepository.js            # Javascript file that points to our web api object "Example" and creates a get method
+                ├── AreaRepository.js               # Javascript file that points to our web api object "Area" and creates methods for it
+                ├── EndpointRepository.js           # Javascript file that points to our web api object "Endpoint" and creates methods for it
                 ├── FormDataRepository.js           # Javascript file that points to our web api object "FormData" and creats a post method
+                ├── ParameterRepository.js          # Javascript file that points to our web api object "Parameter" and creates methods for it
+                ├── LoginRepository.js              # Javascript that points to our web api object "Login" and creates methods to handle login
                 ├── Repository.js                   # Javascript file that points to the url that our backend is running on
-                ├── RepositoryFactory.js            # Javascript file that sets environments for either unit testing or running the project
-            ├── router\                         # Folder to house the Vue router
-                ├── index.js                        # JavaScript file to declare routes and paths
+                └── RepositoryFactory.js            # Javascript file that sets environments for either unit testing or running the project
+            ├── router\
+                └── index.js                        # JavaScript file to declare routes and paths
             ├── views\                          # Folder to house the front-end HTML pages
                 ├── Administration.vue              # HTML and Javascript logic for the Administration page
                 ├── Console.vue                     # HTML for the Console page
                 ├── Home.vue                        # HTML for the Home page
                 ├── Login.vue                       # HTML and Javascript logic for the Login page
                 ├── References.vue                  # HTML and Javascript logic for the References page
+                └── ReferencesLanding.vue           # ***INFO FOR THESE***
             ├── App.vue                         # Main HTML template for Vue pages
-            ├── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
-        ├── tests\unit\                     # Test folder for vue files
+            └── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
+        ├── tests\unit\
             ├── Administration.spec.js          # JavaScript file containing the unit tests for Administration.vue
-            ├── References.spec.js              # JavaScript file containing the unit tests for References.vue
+            └── Login.spec.js              # JavaScript file containing the unit tests for Login.vue
         ├── Dockerfile                      # Dockerfile to build front-end development image
+        ├── DockerfileExternal              # Dockerfile to build front-end development image through an external repository
         └── package.json                    # JSON file to store vue config data and npm script aliases
+    └── docker-compose.yml              # YAML file to build all Docker containers for local development internally
 
     [Truncated for brevity, only relevant folders/files were highlighted.]
 
