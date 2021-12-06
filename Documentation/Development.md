@@ -31,37 +31,34 @@
                     ├── MailSetting.cs                  # Class that gets and sets each form input that gets posted from the frontend
                     └── Parameter.cs                    # Class laying out an endpoint parameter object
                 ├── Controllers\
-                    ├── AreaController.cs               # ***INFO FOR THESE***
-                    ├── EndpointController.cs           # ***INFO FOR THESE***
+                    ├── AreaController.cs               # Web API controller for sending info stored in the database to the front-end
+                    ├── EndpointController.cs           # Web API controller for putting endpoint edits into the database
                     ├── FormDataController.cs           # Web API controller that contains logic for sending an email to a specified reciever
                     ├── LoginController.cs              # Web API controller that contains logic for logging in through Cheetah calls
-                    └── ParameterController.cs          # ***INFO FOR THESE***
                 ├── Models\
-                    ├── Area.cs                         # ***INFO FOR THESE***
-                    ├── CheetahContext.cs               # ***INFO FOR THESE***
-                    ├── Endpoint.cs                     # ***INFO FOR THESE***
-                    ├── LoginResponse.cs                # ***INFO FOR THESE***
-                    ├── Parameter.cs                    # ***INFO FOR THESE***
-                    └── SelectListOption.cs             # ***INFO FOR THESE***
+                    ├── Area.cs                         # Class for modeling the 'Area' table in the database in context to the back-end of our app
+                    ├── CheetahContext.cs               # Class for modeling the context of the database in the back-end of our app
+                    ├── Endpoint.cs                     # Class for modeling the 'Endpoint' table in the database in context to the back-end of our app
+                    ├── LoginResponse.cs                # Class for modeling the response recieved from Accutech's servers when a user attempts to log in
+                    ├── Parameter.cs                    # Class for modeling the 'Parameter' table in the database in context to the back-end of our app
+                    └── SelectListOption.cs             # Class for modeling the 'SelectListOption' table in the database in context to the back-end of our app
                 ├── Services\
-                    ├── AreaService.cs                  # ***INFO FOR THESE***
+                    ├── AreaService.cs                  # Class that contains the logic for the AreaController controller
                     ├── EmailService.cs                 # Service that extends the IEmailService interface and lays out the body of the email to be sent
-                    ├── EndpointService.cs              # ***INFO FOR THESE***
-                    ├── IAreaService.cs                 # ***INFO FOR THESE***
+                    ├── EndpointService.cs              # Class that contains the logic for the EndpointController controller
+                    ├── IAreaService.cs                 # Interface that allows the AreaController to use methods available in AreaService
                     ├── IEmailService.cs                # Interface that contains a task that asynchronously sends an email
-                    ├── IEndpointService.cs             # ***INFO FOR THESE***
+                    ├── IEndpointService.cs             # Interface that allows the EndpointController to use method available in EndpointService
                     ├── ILoginService.cs                # Interface that contains tasks to asynchronously login to Cheetah servers
-                    ├── IParameterService.cs            # ***INFO FOR THESE***
                     └── LoginService.cs                 # Service that extends the ILoginService interface and lays out methods for logging in
-                    └── ParameterService.cs             # ***INFO FOR THESE***
                 ├── ViewModels\
-                    ├── AreaViewModel.cs                # ***INFO FOR THESE***
+                    ├── AreaViewModel.cs                # View Model that contains the context of the Areas stored in the database
                     ├── EmailFormViewModel.cs           # View Model that contains the getters and setters for all of the elements to be sent in the email
-                    ├── EndpointViewModel.cs            # ***INFO FOR THESE***
-                    ├── LoginViewModel.cs               # ***INFO FOR THESE***
-                    ├── ParameterViewModel.cs           # ***INFO FOR THESE***
-                    ├── SelectListOptionViewModel.cs    # ***INFO FOR THESE***
-                    └── SidebarViewModel.cs             # ***INFO FOR THESE***
+                    ├── EndpointViewModel.cs            # View Model that contians the context of the Endpoints stored in the database
+                    ├── LoginViewModel.cs               # View Model that contains the context of the Login to be used by Login Service
+                    ├── ParameterViewModel.cs           # View Model that contains the context of the Parameters stored in the database
+                    ├── SelectListOptionViewModel.cs    # View Model that contains the context of the Select List Options stored in the database
+                    └── SidebarViewModel.cs             # View Model that contains the context of the links that are featured in the side bar of the front-end References page
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
                 ├── appSettings.json                # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
                 └── Portal.csproj                   # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
@@ -98,7 +95,7 @@
                 ├── Home.vue                        # HTML for the Home page
                 ├── Login.vue                       # HTML and Javascript logic for the Login page
                 ├── References.vue                  # HTML and Javascript logic for the References page
-                └── ReferencesLanding.vue           # ***INFO FOR THESE***
+                └── ReferencesLanding.vue           # HTML for the References landing page
             ├── App.vue                         # Main HTML template for Vue pages
             └── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
         ├── tests\unit\
