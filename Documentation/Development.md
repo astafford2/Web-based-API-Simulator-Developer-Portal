@@ -164,7 +164,7 @@
     - `npm run serve`
 - The front-end should spin up, and in a browser you can go to http://localhost:8080 and see the front-end web application pages
 **OR**
-- Open the `vue` folder in Visual Studio Code
+- Open the 'vue' folder in Visual Studio Code
     - Hit 'Ctrl + ~' to open a shell in the vue folder
     - Run the command `npm run serve`
     - Navigate to http://localhost:8080
