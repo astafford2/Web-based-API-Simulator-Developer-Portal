@@ -201,7 +201,7 @@
 
 #### &emsp;Front-end:
 - In a CLI, move into the *\vue* folder and run the front-end tests
-    - `npm run t`
+    - `npm run test`
 
 #### &emsp;Back-end:
 - In a CLI, move into the *\dotnet\Portal\Portal.Test* folder and run the back-end tests
@@ -210,25 +210,23 @@
 
 ### Interpreting code tests
 #### &emsp;Front-end:
-- After running the command `npm run t`, if the tests pass, they will have a checkmark next to them as shown below
+- After running the command `npm run test`, if the tests pass, they will have a checkmark next to them as shown below
 <br>
-<img src="DocumentationImages/VueTestsPass.PNG">
+<img src="DocumentationImages/VueTestPassIteration2.PNG">
 <br>
 <ul>
-    <li>"add parameter button can be found" tests if the add parameter button can be found on the parameter modal on the administration page
-    <li>"parameter modal can be found" tests if the modal to add parameters can be found on the administration page
-    <li>"it attempts to load" tests if the references page attempts to load information from the back-end
-    <li>"it is not loaded" tests if the references page is not loaded before it gets the information from the back-end
-    <li>"it loads the json response" tests if the references page can load the json data from the testing environment
-    <li>"it displays the json response correctly" tests if the references page displays the json response correctly
+    <li>"login page exists" tests if the login page can be found
+    <li>"login is accepted from Cheetah" test if the login information from the user is valid with Accutech's servers
 </ul>
 
 #### &emsp;Back-end:
 - After running the command `dotnet test`, if the tests pass the test window will look like this
 <br>
-<img src="DocumentationImages/DotnetTestsPass.PNG">
+<img src="DocumentationImages/DotnetTestsPassIteration2.PNG">
 <br>
 <ul>
-    <li>The TestGetEndpoints test method tests the data configuration from the ExampleController controller
-    <li>The TestGetEmailConfig test method tests the data configuraiton from the FormDataController controller
+    <li>AreaServiceTest contains methods for getting information from the database
+    <li>EndpointServiceTest contains methods for putting description edits into the database
+    <li>FormDataControllerTest contains methods for testing the email sending configurations
+    <li>LoginServiceTest contains methods for testing the verifications of users who log into our app
 </ul>
