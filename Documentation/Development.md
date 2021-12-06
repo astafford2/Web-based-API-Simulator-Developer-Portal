@@ -112,7 +112,9 @@
     [Truncated for brevity, only relevant folders/files were highlighted.]
 
 ## Important files
-**appSettings.json** - This file stores all of the configuration settings for the back-end
+**appSettings.json** - This file stores all of the configuration settings for the Portal.csproj project
+
+**testconfig.json** - This file stores all of the configuration settings for the Portal.Test.csproj project
 
 **launchSettings.json** - This files stores the launch configuration settings for the back-end including what port it will run on
 
