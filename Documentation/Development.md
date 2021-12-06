@@ -177,7 +177,7 @@
     - `docker-compose build --no-cache`
     - Then running `docker-compose up`
 - To restore the Cheetah.bak database backup into the `dev-portal-db` container...
-    - Open a new CLI or shell
+    - Open a new CLI or shell and cd into the root folder of the repository
     - Copy the backup file into the container with the command `docker cp "./databases/Cheetah.bak" dev-portal-db:var/opt/mssql`
     - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
     - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
