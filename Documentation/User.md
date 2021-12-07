@@ -15,6 +15,9 @@ On the login page, the user will have the option to log in or request access. Se
 
 If the user selects the Request Access button, they will be given a form to fill out that will send an email to an email address specified in the back-end. The email will contain the information gathered from the form. After filling out the form, the user can click the Submit Form button and the email will be sent. Currently, to send an email the "Enabled" option in the appSettings.json file in the back-end needs to be set to true. The email address to be sent to is currently set to our professor's email address, for grading purposes.
 
+<img src="DocumentationImages/LoginUser.PNG"> <br>
+- The user can login with their Accutech username and password
+
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page
 - <b>Gain Access:</b> Brings the user to the references page
@@ -25,6 +28,13 @@ If the user selects the Request Access button, they will be given a form to fill
 ### - References Page
 
 On the references page, the user will first be brought to the references landing page telling the user to select an object link. From there the user can select which object in the Cheetah API they would like to either work with or see the available endpoints of from the sidebar. When the user selects an object from the sidebar they will be taken to a page containing information about endpoints and parameters within that object.
+
+<img src="DocumentationImages/ReferencesLanding.PNG"> <br>
+- The References landing page looks like this. From here the user can select an object link in the sidebar on the left.
+
+<img src="DocumentationImages/ReferencesAccount.PNG"> <br>
+- Once an object is selected it will bring the user to that object's page with information about the object endpoints and parameters.
+    - In this case, 'Account' was selected
 
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page
@@ -43,6 +53,16 @@ The console page has been set up layout-wise but does not have any functionality
 On the administration page, a table is given listing the areas. Within each of these areas are a selection of endpoints. To access the endpoints select the button for the area you want to access, and a table containing the endpoints of the area will display below. You can then choose an endpoint that to edit by once again clicking the edit button on the right side of the endpoint you wish to select for editing the description. Once an endpoint is selected, you can provide an input for a new description of the endpoint in the box that appears underneath the endpoint selection table. To change the description of the endpoint you selected, you can press the submit changes button. Once the submit changes button is selected, you will be redirected to the references page and can now select the object containing the endpoint you changed and see that the description has changed. 
 
 To the right, a table of the parameters for the endpoint selected will display as an endpoint is selected. Some endpoints may not yet contain parameters that will be expressed if that is the case. Below the endpoints parameter display, if any, an empty table is given and below that is an add-parameter button. When you click the add parameter button, a modal will display requesting user input. The user can then fill in the information for the modal, including the parameter name, description, type through the selection bar, and say whether it is is required or not through the checkbox. You can click outside the modal to close it or fill out the information for the parameter and click the save button. Clicking the button will close the modal, save the information entered, and display the parameter information to the table. The table also displays the endpoint that the user wants to add to. In other words, the endpoint recorded on the table will be the one currently selected. The modal will not close unless the parameter has a name and a parameter type is selected. Not filling this out will cause the save button in the modal to be disabled. 
+
+<img src="DocumentationImages/AdminPreSelect.PNG"> <br>
+- The admin page will present the user with a table of the Cheetah API objects.
+
+<img src="DocumentationImages/AdminAreaSelected.PNG"> <br>
+- Once an area is selected it will present the user with a table of the endpoints within that object
+
+<img src="DocumentationImages/AdminEditDescriptionAvailable.PNG"> <br>
+- Once an endpoint is selected it will present the user with the ability to edit that endpoint's description
+- The user can put in a new description and hit the 'Submit Changes' button to edit that endpoint's description
 
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page
