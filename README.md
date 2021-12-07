@@ -28,5 +28,5 @@ Accutech Systems Corporation
   https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal/projects/3
 - https://github.com/astafford2/Web-based-API-Simulator-Developer-Portal-Docker
 
-## Code Repositories
+## Code Repository
 - https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/
