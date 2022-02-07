@@ -6,6 +6,7 @@
 <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
 <img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%202019-v15.0.2000.5-blueviolet>
 <img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%20Management%20Studio%2018-v18.9.2-purple>
+<img src=https://img.shields.io/badge/Docker%20Desktop-v4.4.4-9cf>
 <br><br>
 
 - `.NET 5 SDK v5.0.402`
@@ -13,6 +14,7 @@
 - `Vue CLI v4.5.13`
 - `Microsoft SQL Server 2019 v15.0.2000.5 for database support`
 - `Microsoft SQL Server Management Studio 18 v18.9.2 for database management`
+- `Docker Desktop 4.4.4`
 
 ## Required IDEs
 - IDEs used for development
@@ -140,10 +142,10 @@
 - In the window that comes up, select `File` from the dropdown menu
 - Select any existing paths in the `Browse Media` box and click `Remove`
 - Select `Add`
-- Find the project repository in the file structure that comes up, select the 'Cheetah.bak' database backup file, and select `Ok`
-- Select the 'Cheetah.bak' file path in the `Browse Media` box and click `Ok`
-- In the restore database window, write 'Cheetah' in the database input box if it's not already inputed
-- Click `Ok` to restore the Cheetah database from the backup file
+- Find the project repository in the file structure that comes up, select the 'CheetahDB.bak' database backup file, and select `Ok`
+- Select the 'CheetahDB.bak' file path in the `Browse Media` box and click `Ok`
+- In the restore database window, write 'CheetahDB' in the database input box if it's not already inputed
+- Click `Ok` to restore the CheetahDB database from the backup file
 
 #### &emsp;Back-end:
 - In a CLI, move into the *\dotnet\Portal\Portal* folder and first build the project .dll
@@ -169,6 +171,9 @@
     - Navigate to http://localhost:8080
 
 ### Building and running with Docker
+- Startup Docker Desktop on your computer to start the Docker Engine
+- Clone the project repository from BitBucket
+    - `git clone https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/ bsu.developer-portal`
 - Run the following docker-compose command in the root folder of the repository (where docker-compose.yml is):
     - `docker-compose up --build`
     - This might take some time for the initial build.
@@ -176,14 +181,14 @@
 - If you want to rebuild from scratch, try using --nocache option.
     - `docker-compose build --no-cache`
     - Then running `docker-compose up`
-- To restore the Cheetah.bak database backup into the `dev-portal-db` container...
+- To restore the CheetahDB.bak database backup into the `dev-portal-db` container...
     - Open a new CLI or shell and cd into the root folder of the repository
-    - Copy the backup file into the container with the command `docker cp "./databases/Cheetah.bak" dev-portal-db:var/opt/mssql`
+    - Copy the backup file into the container with the command `docker cp "./databases/CheetahDB.bak" dev-portal-db:var/opt/mssql`
     - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
     - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
     - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
-    - Run the SQL query `RESTORE DATABASE [Cheetah] FROM DISK='/var/opt/mssql/Cheetah.bak' WITH MOVE 'Cheetah' TO '/var/opt/mssql/data/Cheetah.mdf', MOVE 'Cheetah_log' TO '/var/opt/mssql/data/Cheetah_log.ldf'` and hit enter
-    - Type `GO` into the SQL command and hit enter to restore the database from the Cheetah.bak database backup file
+    - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'Cheetah_log' TO '/var/opt/mssql/data/Cheetah_log.ldf'` and hit enter
+    - Type `GO` into the SQL command and hit enter to restore the database from the CheetahDB.bak database backup file
 
 ### Running code tests
 #### &emsp;Test Database:
