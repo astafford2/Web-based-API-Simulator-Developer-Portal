@@ -146,6 +146,8 @@
 - Select the 'CheetahDB.bak' file path in the `Browse Media` box and click `Ok`
 - In the restore database window, write 'CheetahDB' in the database input box if it's not already inputed
 - Click `Ok` to restore the CheetahDB database from the backup file
+- If there are any issues, check to make sure the proper connection string is used in the back-end file "Startup.cs"
+    - "CheetahDbLocal" for local machine database and "CheetahDbDocker" for a database in a Docker container.
 
 #### &emsp;Back-end:
 - In a CLI, move into the *\dotnet\Portal\Portal* folder and first build the project .dll
