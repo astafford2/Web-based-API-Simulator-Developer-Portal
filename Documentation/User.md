@@ -2,11 +2,16 @@
 ---
 ### - Home Page
 
-Opening the software, you will start at the home page, which provides some of the uses that will come or be in the software in the end product. On this page, you will find a login button located at the top right of the page. Click it to go to the login page. A home button will be displayed at the top of the screen at all times on every page for whenever the user wants to return to the main home page. 
+Opening the software, you will start at the home page, which provides some of the uses that will come or be in the software in the end product. On this page, you will find a login button located at the top right of the page. Click it to go to the login page. A home button will be displayed at the top of the screen at all times on every page for whenever the user wants to return to the main home page. The Home page also features the run data loading button. When the user clicks this button it will either add or update the collections, endpoints, and etc. featured in the documentation with the newest version of the Cheetah API. This is useful when the user knows that an update to the api has occured and the user needs the newest version of the documentation.
+
+<img src="DocumentationImages/DataLoaderLoading.PNG"> <br>
+- After the user clicks the data loading button, a spinner will replace the button indicating that the data is being loaded in
+    - After the spinner disapears and the button comes back, the data has been loaded
 
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page where you would need to go back throgh the login page
 - <b>Login:</b> Brings the user to the login page where they gain access if they haven't already
+- <b>Run Data Loading:</b> Allows the user to load data in from Accutech's Cheetah swagger page.
 
 ---
 ### - Login Page
@@ -27,14 +32,18 @@ If the user selects the Request Access button, they will be given a form to fill
 ---
 ### - References Page
 
-On the references page, the user will first be brought to the references landing page telling the user to select an object link. From there the user can select which object in the Cheetah API they would like to either work with or see the available endpoints of from the sidebar. When the user selects an object from the sidebar they will be taken to a page containing information about endpoints and parameters within that object.
+On the references page, the user will first be brought to the references landing page telling the user to select an object link. From there the user can select which object in the Cheetah API they would like to either work with or see the available endpoints of from the sidebar. After the user clicks one of these objects it will drop down with all of the endpoints available in that object. Once the user clicks one of these endpoints they will be brought to a page that lists information about that specific endpoint, including the endpoint's description, parameters, and responses. If the user wishes to edit the description on the endpoint to gain a better understanding of what it does, the user can click the edit button, click the endpoint description, type what they want the description to be, and click the save button. The page will reload with the new endpoint description.
 
 <img src="DocumentationImages/ReferencesLanding.PNG"> <br>
-- The References landing page looks like this. From here the user can select an object link in the sidebar on the left.
+- The References landing page looks like this. From here the user can select an object link in the sidebar on the left, and an ednpoint.
 
-<img src="DocumentationImages/ReferencesAccount.PNG"> <br>
-- Once an object is selected it will bring the user to that object's page with information about the object endpoints and parameters.
-    - In this case, 'Account' was selected
+<img src="DocumentationImages/GetAccountGroupInformationEndpoint.PNG"> <br>
+- Once an endpoint is selected it will bring the user to that endpoint's page with information about the endpoint's parameters and responses
+    - In this case, 'GetAccountGroupInformation' was selected
+
+<img src="DocumentationImages/EditingEndpoint.PNG"> <br>
+- If a user wants to edit an endpoint's description, they cn click the edit button and start typing in endpoint description area
+    - Once a user is done they can click the save button and the change will be saved
 
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page
@@ -43,26 +52,6 @@ On the references page, the user will first be brought to the references landing
 ### - Console Page
 
 The console page has been set up layout-wise but does not have any functionality currently. In future versions we will be moving into giving this page funcitonality or perhaps merging the console onto the references page in the form of a card view.
-
-#### Page buttons:
-- <b>Home:</b> Goes back to the starting page
-
----
-### - Administration Page 
-
-On the administration page, a table is given listing the areas. Within each of these areas are a selection of endpoints. To access the endpoints select the button for the area you want to access, and a table containing the endpoints of the area will display below. You can then choose an endpoint that to edit by once again clicking the edit button on the right side of the endpoint you wish to select for editing the description. Once an endpoint is selected, you can provide an input for a new description of the endpoint in the box that appears underneath the endpoint selection table. To change the description of the endpoint you selected, you can press the submit changes button. Once the submit changes button is selected, you will be redirected to the references page and can now select the object containing the endpoint you changed and see that the description has changed. 
-
-To the right, a table of the parameters for the endpoint selected will display as an endpoint is selected. Some endpoints may not yet contain parameters that will be expressed if that is the case. Below the endpoints parameter display, if any, an empty table is given and below that is an add-parameter button. When you click the add parameter button, a modal will display requesting user input. The user can then fill in the information for the modal, including the parameter name, description, type through the selection bar, and say whether it is is required or not through the checkbox. You can click outside the modal to close it or fill out the information for the parameter and click the save button. Clicking the button will close the modal, save the information entered, and display the parameter information to the table. The table also displays the endpoint that the user wants to add to. In other words, the endpoint recorded on the table will be the one currently selected. The modal will not close unless the parameter has a name and a parameter type is selected. Not filling this out will cause the save button in the modal to be disabled. 
-
-<img src="DocumentationImages/AdminPreSelect.PNG"> <br>
-- The admin page will present the user with a table of the Cheetah API objects.
-
-<img src="DocumentationImages/AdminAreaSelected.PNG"> <br>
-- Once an area is selected it will present the user with a table of the endpoints within that object
-
-<img src="DocumentationImages/AdminEditDescriptionAvailable.PNG"> <br>
-- Once an endpoint is selected it will present the user with the ability to edit that endpoint's description
-- The user can put in a new description and hit the 'Submit Changes' button to edit that endpoint's description
 
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page
