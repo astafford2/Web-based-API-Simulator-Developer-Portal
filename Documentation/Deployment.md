@@ -15,6 +15,7 @@
 <img src=https://img.shields.io/badge/Vue%20CLI-v4.5.13-brightgreen>
 <img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%202019-v15.0.2000.5-blueviolet>
 <img src=https://img.shields.io/badge/Microsoft%20SQL%20Server%20Management%20Studio%2018-v18.9.2-purple>
+<img src=https://img.shields.io/badge/Docker%20Desktop-v4.4.4-9cf>
 <br>
 
 - `.NET 5 SDK v5.0.402`
