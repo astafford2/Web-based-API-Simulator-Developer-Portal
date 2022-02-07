@@ -192,16 +192,16 @@
 
 ### Running code tests
 #### &emsp;Test Database:
-- Running tests for the backend relies on having a working copy of the CheetahTest database
+- Running tests for the backend relies on having a working copy of the CheetahDBTest database
     - Open SQL Server Management Studio and connect to your Desktop server
     - Right click on `Databases` and select `Restore Database`
     - Select the radio button labeled `Device` and click the `Browse (...)` button next to the input box
     - In the window that comes up, select `File` from the dropdown menu
     - Select any existing paths in the `Browse Media` box and click `Remove`
     - Select `Add`
-    - Find the project repository in the file structure that comes up, select the 'CheetahTest.bak' database backup file, and select `Ok`
-    - Select the 'CheetahTest.bak' file path in the `Browse Media` box and click `Ok`
-    - In the restore database window, write 'CheetahTest' in the database input box if it's not already inputed
+    - Find the project repository in the file structure that comes up, select the 'CheetahDBTest.bak' database backup file, and select `Ok`
+    - Select the 'CheetahDBTest.bak' file path in the `Browse Media` box and click `Ok`
+    - In the restore database window, write 'CheetahDBTest' in the database input box if it's not already inputed
     - Click `Ok` to restore the Cheetah database from the backup file
 
 #### &emsp;Front-end:

@@ -84,7 +84,7 @@
     - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
     - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
     - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
-    - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'Cheetah_log' TO '/var/opt/mssql/data/Cheetah_log.ldf'` and hit enter
+    - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'CheetahDB_log' TO '/var/opt/mssql/data/CheetahDB_log.ldf'` and hit enter
     - Type `GO` into the SQL command and hit enter to restore the database from the CheetahDB.bak database backup file
 
 ### To stop system operations...
