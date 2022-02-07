@@ -61,3 +61,6 @@ The console page has been set up layout-wise but does not have any functionality
 - <b>References:</b> The Reference option will take you to the references landing page
 - <b>Console:</b> The Console option will take you to the console page
 - <b>Admin:</b> The Administration option will take you to the administration page
+
+#### User Dropdown Menu (Featured on all pages after logging in):
+- <b>Logout:</b> The Logout option will log out the user and push them back to the login page 
