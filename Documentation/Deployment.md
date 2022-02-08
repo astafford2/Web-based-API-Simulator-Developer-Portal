@@ -88,6 +88,8 @@
     - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
     - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'CheetahDB_log' TO '/var/opt/mssql/data/CheetahDB_log.ldf'` and hit enter
     - Type `GO` into the SQL command and hit enter to restore the database from the CheetahDB.bak database backup file
+    - If there are any issues, check to make sure the proper connection string is used in the back-end file "Startup.cs"
+        - "CheetahDbLocal" for local machine database and "CheetahDbDocker" for a database in a Docker container.
 
 ### To stop system operations...
 - Change directory to the root folder of the repository (where docker-compose.yml is):
@@ -109,4 +111,4 @@
 - The critical sections that are mostly likely to fail are in the Request Access section of the Login page and the loading of data stored in the Database.
     - When filling out the Request Access form, ensure that each field in the form is filled out. If any field is left blank, the access request may not properly send and the user may receive an error.
     - The email sent after submitting the Request Access form may fail to send. Ensure that '"Enabled": true' is set in 'dotnet/Portal/Portal/appsettings.json'--if 'Enabled' is set to 'false', the email may fail to send.
-- If the References page displays a spinner and does not load information in a reasonable amount of time, more than likely the database backup file was not restored correctly. Ensure that the database can be seen in SQL Server Management Studio and that queries can be run on it.
+- If the References page displays a spinner and does not load information in a reasonable amount of time, more than likely the database backup file was not restored correctly. Ensure that the database can be seen in SQL Server Management Studio and that queries can be run on it. Alternatively if you are running from Docker, assure that the steps in the above section "Starting/Stopping System Operations with Docker" were done correctly.

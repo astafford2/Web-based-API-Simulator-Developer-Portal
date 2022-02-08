@@ -41,8 +41,8 @@
                 ├── Extensions\
                     └── ApiJsonExtensions.cs            # Helper class containing static methods to load and organize data from JSON file
                 ├── Models\
-                    ├── ApiJson.cd                      # Class for modeling the JSON components to load into the database
-                    ├── CheetahContext.cs               # Class for modeling the context of the database in the back-end of our app
+                    ├── ApiJson.cs                      # Class for modeling the JSON components to load into the database
+                    ├── CheetahDBContext.cs             # Class for modeling the context of the database in the back-end of our app
                     ├── Collection.cs                   # Class for modeling the 'Collections' table in the database in context to the back-end of our app
                     ├── Endpoint.cs                     # Class for modeling the 'Endpoints' table in the database in context to the back-end of our app
                     ├── LoginResponse.cs                # Class for modeling the response recieved from Accutech's servers when a user attempts to log in
@@ -50,7 +50,7 @@
                     ├── Request.cs                      # Class for modeling the 'Requests' table in the database in context to the back-end of our app
                     ├── Response.cs                     # Class for modeling the 'Responses' table in the database in context to the back-end of our app
                     ├── SchemasReference.cs             # Class for modeling the 'SchemasReferences' table in the database in context to the back-end of our app
-                    └── Session.cs             # Class for modeling the 'Sessions' table in the database in context to the back-end of our app
+                    └── Session.cs                      # Class for modeling the 'Sessions' table in the database in context to the back-end of our app
                 ├── Services\
                     ├── ApiJsonService.cs               # Class that contains teh logic for the ApiJsonController controller
                     ├── CollectionService.cs            # Class that contains the logic for the CollectionController controller
@@ -205,6 +205,8 @@
     - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
     - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'CheetahDB_log' TO '/var/opt/mssql/data/CheetahDB_log.ldf'` and hit enter
     - Type `GO` into the SQL command and hit enter to restore the database from the CheetahDB.bak database backup file
+    - If there are any issues, check to make sure the proper connection string is used in the back-end file "Startup.cs"
+        - "CheetahDbLocal" for local machine database and "CheetahDbDocker" for a database in a Docker container.
 
 ### Running code tests
 #### &emsp;Test Database:
@@ -241,12 +243,13 @@
 </ul>
 
 #### &emsp;Back-end:
-- After running the command `dotnet test`, if the tests pass the test window will look like this
+- After running the command `dotnet test`, if the tests pass the test window will look similar to below
 <br>
 <img src="DocumentationImages/DotnetTestsPassIteration2.PNG">
 <br>
 <ul>
-    <li>AreaServiceTest contains methods for getting information from the database
+    <li>ApiJsonTest contains methods for testing getting information from the Cheetah API swagger json
+    <li>CollectionServiceTest contains methods to test getting information from the database
     <li>EndpointServiceTest contains methods for putting description edits into the database
     <li>FormDataControllerTest contains methods for testing the email sending configurations
     <li>LoginServiceTest contains methods for testing the verifications of users who log into our app

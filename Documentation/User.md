@@ -35,14 +35,14 @@ If the user selects the Request Access button, they will be given a form to fill
 On the references page, the user will first be brought to the references landing page telling the user to select an object link. From there the user can select which object in the Cheetah API they would like to either work with or see the available endpoints of from the sidebar. After the user clicks one of these objects it will drop down with all of the endpoints available in that object. Once the user clicks one of these endpoints they will be brought to a page that lists information about that specific endpoint, including the endpoint's description, parameters, and responses. If the user wishes to edit the description on the endpoint to gain a better understanding of what it does, the user can click the edit button, click the endpoint description, type what they want the description to be, and click the save button. The page will reload with the new endpoint description.
 
 <img src="DocumentationImages/ReferencesLanding.PNG"> <br>
-- The References landing page looks like this. From here the user can select an object link in the sidebar on the left, and an ednpoint.
+- The References landing page looks like this. From here the user can select an object link in the sidebar on the left, and an endpoint.
 
 <img src="DocumentationImages/GetAccountGroupInformationEndpoint.PNG"> <br>
 - Once an endpoint is selected it will bring the user to that endpoint's page with information about the endpoint's parameters and responses
     - In this case, 'GetAccountGroupInformation' was selected
 
 <img src="DocumentationImages/EditingEndpoint.PNG"> <br>
-- If a user wants to edit an endpoint's description, they cn click the edit button and start typing in endpoint description area
+- If a user wants to edit an endpoint's description, they can click the edit button and start typing in endpoint description area
     - Once a user is done they can click the save button and the change will be saved
 
 #### Page buttons:
@@ -57,10 +57,9 @@ The console page has been set up layout-wise but does not have any functionality
 - <b>Home:</b> Goes back to the starting page
 
 ---
-#### Pages Dropdown Menu (Featured on the Reference, Console, Administration pages, and home page after logging in):
+#### Pages Dropdown Menu (Featured on all pages after logging in):
 - <b>References:</b> The Reference option will take you to the references landing page
 - <b>Console:</b> The Console option will take you to the console page
-- <b>Admin:</b> The Administration option will take you to the administration page
 
 #### User Dropdown Menu (Featured on all pages after logging in):
 - <b>Logout:</b> The Logout option will log out the user and push them back to the login page 
