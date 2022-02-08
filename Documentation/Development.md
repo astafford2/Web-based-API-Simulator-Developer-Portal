@@ -24,48 +24,61 @@
 
 ## Folder structure
     .
+    ├── databases\                      # Folder to store database backups
+        ├── CheetahDB.bak                   # Backup of main database
+        └── CheetahDBTest.bak               # Backup of test database
     ├── dotnet\                         # Back-end folder for all .NET files
         ├── Portal\
             ├── Portal\
                 ├── Classes\
-                    ├── Area.cs                         # Class laying out an area object (area in this instance is the object that each endpoint works with)
-                    ├── Endpoint.cs                     # Class laying out an API endpoint object
-                    ├── MailSetting.cs                  # Class that gets and sets each form input that gets posted from the frontend
-                    └── Parameter.cs                    # Class laying out an endpoint parameter object
+                    └── MailSettings.cs                 # Class that gets and sets each form input that gets posted from the frontend
                 ├── Controllers\
-                    ├── AreaController.cs               # Web API controller for sending info stored in the database to the front-end
+                    ├── ApiJsonController.cs            # Web API controller for getting json API endpoint data
+                    ├── CollectionController.cs         # Web API controller for sending info stored in the database to the front-end
                     ├── EndpointController.cs           # Web API controller for putting endpoint edits into the database
                     ├── FormDataController.cs           # Web API controller that contains logic for sending an email to a specified reciever
                     ├── LoginController.cs              # Web API controller that contains logic for logging in through Cheetah calls
+                ├── Extensions\
+                    └── ApiJsonExtensions.cs            # Helper class containing static methods to load and organize data from JSON file
                 ├── Models\
-                    ├── Area.cs                         # Class for modeling the 'Area' table in the database in context to the back-end of our app
+                    ├── ApiJson.cd                      # Class for modeling the JSON components to load into the database
                     ├── CheetahContext.cs               # Class for modeling the context of the database in the back-end of our app
-                    ├── Endpoint.cs                     # Class for modeling the 'Endpoint' table in the database in context to the back-end of our app
+                    ├── Collection.cs                   # Class for modeling the 'Collections' table in the database in context to the back-end of our app
+                    ├── Endpoint.cs                     # Class for modeling the 'Endpoints' table in the database in context to the back-end of our app
                     ├── LoginResponse.cs                # Class for modeling the response recieved from Accutech's servers when a user attempts to log in
-                    ├── Parameter.cs                    # Class for modeling the 'Parameter' table in the database in context to the back-end of our app
-                    └── SelectListOption.cs             # Class for modeling the 'SelectListOption' table in the database in context to the back-end of our app
+                    ├── Parameter.cs                    # Class for modeling the 'Parameters' table in the database in context to the back-end of our app
+                    ├── Request.cs                      # Class for modeling the 'Requests' table in the database in context to the back-end of our app
+                    ├── Response.cs                     # Class for modeling the 'Responses' table in the database in context to the back-end of our app
+                    ├── SchemasReference.cs             # Class for modeling the 'SchemasReferences' table in the database in context to the back-end of our app
+                    └── Session.cs             # Class for modeling the 'Sessions' table in the database in context to the back-end of our app
                 ├── Services\
-                    ├── AreaService.cs                  # Class that contains the logic for the AreaController controller
+                    ├── ApiJsonService.cs               # Class that contains teh logic for the ApiJsonController controller
+                    ├── CollectionService.cs            # Class that contains the logic for the CollectionController controller
                     ├── EmailService.cs                 # Service that extends the IEmailService interface and lays out the body of the email to be sent
                     ├── EndpointService.cs              # Class that contains the logic for the EndpointController controller
-                    ├── IAreaService.cs                 # Interface that allows the AreaController to use methods available in AreaService
+                    ├── IApiJsonService.cs              # Interface that allows the ApiJsonController to use methods available in ApiJsonService
+                    ├── ICollectionService.cs           # Interface that allows the CollectionController to use methods available in CollectionService
                     ├── IEmailService.cs                # Interface that contains a task that asynchronously sends an email
                     ├── IEndpointService.cs             # Interface that allows the EndpointController to use method available in EndpointService
                     ├── ILoginService.cs                # Interface that contains tasks to asynchronously login to Cheetah servers
                     └── LoginService.cs                 # Service that extends the ILoginService interface and lays out methods for logging in
                 ├── ViewModels\
-                    ├── AreaViewModel.cs                # View Model that contains the context of the Areas stored in the database
+                    ├── CollectionViewModel.cs                # View Model that contains the context of the Collections stored in the database
                     ├── EmailFormViewModel.cs           # View Model that contains the getters and setters for all of the elements to be sent in the email
                     ├── EndpointViewModel.cs            # View Model that contians the context of the Endpoints stored in the database
                     ├── LoginViewModel.cs               # View Model that contains the context of the Login to be used by Login Service
                     ├── ParameterViewModel.cs           # View Model that contains the context of the Parameters stored in the database
-                    ├── SelectListOptionViewModel.cs    # View Model that contains the context of the Select List Options stored in the database
+                    ├── RequestViewModel.cs           # View Model that contains the context of the Requests stored in the database
+                    ├── ResponseViewModel.cs           # View Model that contains the context of the Responses stored in the database
+                    ├── SchemaReferenceViewModel.cs           # View Model that contains the context of the SchemaReferences stored in the database
                     └── SidebarViewModel.cs             # View Model that contains the context of the links that are featured in the side bar of the front-end References page
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
                 ├── appSettings.json                # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
                 └── Portal.csproj                   # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
             ├── Portal.Test\
-                ├── AreaServiceTest.cs              # Class of unit tests for the AreaService.cs service
+                ├── ApiJsonTest.cs                  # Class of unit tests for ApiJson data loader classes
+                ├── CollectionServiceTest.cs        # Class of unit tests for the CollectionService.cs service
+                ├── EndpointServiceTest.cs          # Class of unit tests for the EndpointService.cs service
                 ├── FormDataController.cs           # Class of unit tests for the FormDataController.cs controller
                 ├── LoginServiceTests.cs            # Class of unit tests for the LoginService.cs service
                 ├── testconfig.json                 # Json file that holds the information for the testing environment
@@ -82,11 +95,12 @@
                 ├── Footer.vue                      # Component that contains HTML for the footer featured on App.vue
                 └── Sidebar.vue                     # Component that contains HTML for the References sidebar
             ├── repositories\                   # Folder containing repository pattern Javascript files
-                ├── AreaRepository.js               # Javascript file that points to our web api object "Area" and creates methods for it
+                ├── CollectionRepository.js         # Javascript file that points to our web api object "Collection" and creates methods for it
+                ├── DataLoaderRepository            # Javascript file that points to our web api object "ApiJson" and creates methods for it
                 ├── EndpointRepository.js           # Javascript file that points to our web api object "Endpoint" and creates methods for it
                 ├── FormDataRepository.js           # Javascript file that points to our web api object "FormData" and creats a post method
-                ├── ParameterRepository.js          # Javascript file that points to our web api object "Parameter" and creates methods for it
                 ├── LoginRepository.js              # Javascript that points to our web api object "Login" and creates methods to handle login
+                ├── ParameterRepository.js          # Javascript file that points to our web api object "Parameter" and creates methods for it
                 ├── Repository.js                   # Javascript file that points to the url that our backend is running on
                 └── RepositoryFactory.js            # Javascript file that sets environments for either unit testing or running the project
             ├── router\
@@ -101,12 +115,12 @@
             ├── App.vue                         # Main HTML template for Vue pages
             └── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
         ├── tests\unit\
-            ├── Administration.spec.js          # JavaScript file containing the unit tests for Administration.vue
             └── Login.spec.js              # JavaScript file containing the unit tests for Login.vue
         ├── Dockerfile                      # Dockerfile to build front-end development image
         ├── DockerfileExternal              # Dockerfile to build front-end development image through an external repository
         └── package.json                    # JSON file to store vue config data and npm script aliases
-    └── docker-compose.yml              # YAML file to build all Docker containers for local development internally
+    ├── docker-compose.yml              # YAML file to build all Docker containers for local development internally
+    └── README.md                       # Markdown file that briefly explains the project and list release dates
 
     [Truncated for brevity, only relevant folders/files were highlighted.]
 
