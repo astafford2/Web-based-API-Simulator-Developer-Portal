@@ -16,7 +16,7 @@ Opening the software, you will start at the home page, which provides some of th
 ---
 ### - Login Page
 
-On the login page, the user will have the option to log in or request access. Selecting the Gain Access button will make an HTTP Token call to the Cheetah API with the credentials entered in the Username and Password fields. If the username and password are legitimate, the login will go through successfully, and the user will then be taken to the next page which is the references page. If the username and password are incorrect, the Cheetah call will not go through, and the user will be shown an error to check their entered credentials.
+On the login page, the user will have the option to log in or request access. Selecting the Gain Access button will make an HTTP Token call to the Cheetah API with the credentials entered in the Username and Password fields. If the username and password are legitimate, the login will go through successfully, and the user will then be taken to the next page which is the references page. If the username and password are incorrect, the Cheetah call will not go through, and the user will be shown an error to check their entered credentials. However, if connection is unable to be made with Accutech servers, or Accutech servers are experiencing an outage, the database will be checked for previously logged in users. If the user has logged in previously, they will be given access to the documentation, but they will not be able to make a call to the Cheetah API with the sandbox test console.
 
 If the user selects the Request Access button, they will be given a form to fill out that will send an email to an email address specified in the back-end. The email will contain the information gathered from the form. After filling out the form, the user can click the Submit Form button and the email will be sent. Currently, to send an email the "Enabled" option in the appSettings.json file in the back-end needs to be set to true. The email address to be sent to is currently set to our professor's email address, for grading purposes.
 
@@ -32,7 +32,7 @@ If the user selects the Request Access button, they will be given a form to fill
 ---
 ### - References Page
 
-On the references page, the user will first be brought to the references landing page telling the user to select an object link. From there the user can select which object in the Cheetah API they would like to either work with or see the available endpoints of from the sidebar. After the user clicks one of these objects it will drop down with all of the endpoints available in that object. Once the user clicks one of these endpoints they will be brought to a page that lists information about that specific endpoint, including the endpoint's description, parameters, and responses. If the user wishes to edit the description on the endpoint to gain a better understanding of what it does, the user can click the edit button, click the endpoint description, type what they want the description to be, and click the save button. The page will reload with the new endpoint description.
+On the references page, the user will first be brought to the references landing page telling the user to select an object link. From there the user can select which object in the Cheetah API they would like to either work with or see the available endpoints of from the sidebar. After the user clicks one of these objects it will drop down with all of the endpoints available in that object. Once the user clicks one of these endpoints they will be brought to a page that lists information about that specific endpoint, including the endpoint's description, parameters, and responses. If the user wishes to edit the description on the endpoint or any of it's parameters to gain a better understanding of what it does, the user can click the edit button, click the endpoint or parameter description, type what they want the description to be, and click the save button. The page will reload with the new endpoint and parameter description. If the user wishes to test the endpoint and see what the endpoint would return with given real parameters, they can click the "Open Console" button and the sandbox test console will open. From there the user has the option to either close the console with the "Close console" button, or to execute a call to the Cheetah API with real parameters. The user will input the parameters they'd like to test the endpoint with and click the "Execute" button to make the call. The response from the Cheetah API will then be displayed underneath the console.
 
 <img src="DocumentationImages/ReferencesLanding.PNG"> <br>
 - The References landing page looks like this. From here the user can select an object link in the sidebar on the left, and an endpoint.
@@ -42,19 +42,24 @@ On the references page, the user will first be brought to the references landing
     - In this case, 'GetAccountGroupInformation' was selected
 
 <img src="DocumentationImages/EditingEndpoint.PNG"> <br>
-- If a user wants to edit an endpoint's description, they can click the edit button and start typing in endpoint description area
+- If a user wants to edit an endpoint or parameter description, they can click the edit button and start typing in endpoint or parameter description area
     - Once a user is done they can click the save button and the change will be saved
 
+<img src="DocumentationImages/OpenConsole.PNG"> <br>
+- If a user wants to test an endpoint with live data, they can click the open console button shown in the picture above
+
+<img src="DocumentationImages/EnteredParameter.PNG"> <br>
+- The user can then input parameters they would like to test
+    - In this case the account number parameter is "00555"
+
+<img src="DocumentationImages/ConsoleResponse.PNG"> <br>
+- After clicking the execute button the user will be given the response underneath the console.
+
 #### Page buttons:
 - <b>Home:</b> Goes back to the starting page
-
----
-### - Console Page
-
-The console page has been set up layout-wise but does not have any functionality currently. In future versions we will be moving into giving this page funcitonality or perhaps merging the console onto the references page in the form of a card view.
-
-#### Page buttons:
-- <b>Home:</b> Goes back to the starting page
+- <b>Open Console:</b> Opens sandbox test console
+- <b>Close Console:</b> Closes the sandbox test console and wipes the response data
+- <b>Execute:</b> Executes a call to the Cheetah API endpoint with the data provided by the user
 
 ---
 #### Pages Dropdown Menu (Featured on all pages after logging in):
