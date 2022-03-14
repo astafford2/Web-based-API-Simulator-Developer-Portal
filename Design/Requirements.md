@@ -35,7 +35,7 @@
 
 - **NR3:** The API references page shall organize the API calls by the object that the call works with. [*Low Priority*] (**BR2**)
 
-- **NR4:** The application shall be designed using the Accutech/Cheetah colors and logo [*Low Priority*] (**BR1**)
+- **NR4:** The application shall be designed using the Accutech/Cheetah colors, logos, and fit the general theme of Accutech's existing websites. [*Low Priority*] (**BR1**)
 
 - **NR5:** Private access applications shall be sent to an internal location for review before acceptance. [*Medium Priority*] (**BR2**)
 
