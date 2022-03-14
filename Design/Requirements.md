@@ -24,6 +24,7 @@
 - **FR12:** The application will feature a navigation bar that allows the user to move to and from pages on the web portal. [*Medium Priority*] (**BR2**)
 
 - **FR13:** The application shall automatically update changes made to the Cheetah API by parsing the data from the existing Cheetah API swagger page. [*High Priority*] (**BR2**)
+- **FR14:** The application shall track administrative changes and store the username of the administrator and the date/time of the edit. [*High Priority*] (**BR2**)
 
 
 <br>
