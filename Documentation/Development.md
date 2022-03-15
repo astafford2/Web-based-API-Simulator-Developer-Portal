@@ -35,9 +35,11 @@
                 ├── Controllers\
                     ├── ApiJsonController.cs            # Web API controller for getting json API endpoint data
                     ├── CollectionController.cs         # Web API controller for sending info stored in the database to the front-end
+                    ├── ConsoleController.cs            # Web API controller for sending HTTP calls to Accutech and returning the response to the front-end
                     ├── EndpointController.cs           # Web API controller for putting endpoint edits into the database
                     ├── FormDataController.cs           # Web API controller that contains logic for sending an email to a specified reciever
                     ├── LoginController.cs              # Web API controller that contains logic for logging in through Cheetah calls
+                    ├── ParameterController.cs          # Web API controller that contains logic for editing parameter description from the database
                 ├── Extensions\
                     └── ApiJsonExtensions.cs            # Helper class containing static methods to load and organize data from JSON file
                 ├── Models\
@@ -61,7 +63,9 @@
                     ├── IEmailService.cs                # Interface that contains a task that asynchronously sends an email
                     ├── IEndpointService.cs             # Interface that allows the EndpointController to use method available in EndpointService
                     ├── ILoginService.cs                # Interface that contains tasks to asynchronously login to Cheetah servers
-                    └── LoginService.cs                 # Service that extends the ILoginService interface and lays out methods for logging in
+                    ├── LoginService.cs                 # Service that extends the ILoginService interface and lays out methods for logging in
+                    ├── IConsoleService.cs              # Interface that contains tasks to asynchronsously make console calls to the Cheetah API
+                    └── ConsoleService.cs               # Service that extends the IConsoleService interface that lays out methods for making HTTP calls to the Cheetah API
                 ├── ViewModels\
                     ├── CollectionViewModel.cs                # View Model that contains the context of the Collections stored in the database
                     ├── EmailFormViewModel.cs           # View Model that contains the getters and setters for all of the elements to be sent in the email
@@ -71,6 +75,8 @@
                     ├── RequestViewModel.cs           # View Model that contains the context of the Requests stored in the database
                     ├── ResponseViewModel.cs           # View Model that contains the context of the Responses stored in the database
                     ├── SchemaReferenceViewModel.cs           # View Model that contains the context of the SchemaReferences stored in the database
+                    ├── ConsoleViewModel.cs           # View Model that contains the context of each parameter and the url of console calls made from the front-end
+                    ├── SessionViewModel.cs           # View Model that contains the context of the Sessions stored in the database
                     └── SidebarViewModel.cs             # View Model that contains the context of the links that are featured in the side bar of the front-end References page
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
                 ├── appSettings.json                # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
@@ -94,8 +100,11 @@
                 ├── Navbar.vue                      # Component that contains HTML for the navigation bar featured on App.vue
                 ├── Footer.vue                      # Component that contains HTML for the footer featured on App.vue
                 └── Sidebar.vue                     # Component that contains HTML for the References sidebar
+            ├── css\                            # Folder containing CSS files for Tailwind CSS
+                ├── tailwind.css                      # File for configuring Tailwind CSS
             ├── repositories\                   # Folder containing repository pattern Javascript files
                 ├── CollectionRepository.js         # Javascript file that points to our web api object "Collection" and creates methods for it
+                ├── ConsoleRepository.js            # Javascript file that points to our web api object "Console" and creates methods for it
                 ├── DataLoaderRepository            # Javascript file that points to our web api object "ApiJson" and creates methods for it
                 ├── EndpointRepository.js           # Javascript file that points to our web api object "Endpoint" and creates methods for it
                 ├── FormDataRepository.js           # Javascript file that points to our web api object "FormData" and creats a post method
@@ -106,7 +115,6 @@
             ├── router\
                 └── index.js                        # JavaScript file to declare routes and paths
             ├── views\                          # Folder to house the front-end HTML pages
-                ├── Administration.vue              # HTML and Javascript logic for the Administration page
                 ├── Console.vue                     # HTML for the Console page
                 ├── Home.vue                        # HTML for the Home page
                 ├── Login.vue                       # HTML and Javascript logic for the Login page
@@ -118,6 +126,7 @@
             └── Login.spec.js              # JavaScript file containing the unit tests for Login.vue
         ├── Dockerfile                      # Dockerfile to build front-end development image
         ├── DockerfileExternal              # Dockerfile to build front-end development image through an external repository
+        ├── tailwind.config.js              # Configuration file for Tailwind CSS that lays out more in depth information for how we'd like Tailwind to function
         └── package.json                    # JSON file to store vue config data and npm script aliases
     ├── docker-compose.yml              # YAML file to build all Docker containers for local development internally
     └── README.md                       # Markdown file that briefly explains the project and list release dates
@@ -197,16 +206,6 @@
 - If you want to rebuild from scratch, try using --nocache option.
     - `docker-compose build --no-cache`
     - Then running `docker-compose up`
-- To restore the CheetahDB.bak database backup into the `dev-portal-db` container...
-    - Open a new CLI or shell and cd into the root folder of the repository
-    - Copy the backup file into the container with the command `docker cp "./databases/CheetahDB.bak" dev-portal-db:var/opt/mssql`
-    - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
-    - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
-    - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
-    - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'CheetahDB_log' TO '/var/opt/mssql/data/CheetahDB_log.ldf'` and hit enter
-    - Type `GO` into the SQL command and hit enter to restore the database from the CheetahDB.bak database backup file
-    - If there are any issues, check to make sure the proper connection string is used in the back-end file "Startup.cs"
-        - "CheetahDbLocal" for local machine database and "CheetahDbDocker" for a database in a Docker container.
 
 ### Running code tests
 #### &emsp;Test Database:

@@ -80,16 +80,6 @@
 - If you want to rebuild from scratch, try using --nocache option.
     - `docker-compose build --no-cache`
     - Then running `docker-compose up`
-- To restore the CheetahDB.bak database backup into the `dev-portal-db` container...
-    - Open a new CLI or shell and cd into the root folder of the repository
-    - Copy the backup file into the container with the command `docker cp "./databases/CheetahDB.bak" dev-portal-db:var/opt/mssql`
-    - Open a bash prompt in the container with the command `docker exec -it dev-portal-db "bash"`
-    - Change directory to the mssql directory withing the docker container with the command `cd var/opt/mssql`
-    - Run a SQL command prompt with the command `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "dev_portal495"`
-    - Run the SQL query `RESTORE DATABASE [CheetahDB] FROM DISK='/var/opt/mssql/CheetahDB.bak' WITH MOVE 'CheetahDB' TO '/var/opt/mssql/data/CheetahDB.mdf', MOVE 'CheetahDB_log' TO '/var/opt/mssql/data/CheetahDB_log.ldf'` and hit enter
-    - Type `GO` into the SQL command and hit enter to restore the database from the CheetahDB.bak database backup file
-    - If there are any issues, check to make sure the proper connection string is used in the back-end file "Startup.cs"
-        - "CheetahDbLocal" for local machine database and "CheetahDbDocker" for a database in a Docker container.
 
 ### To stop system operations...
 - Change directory to the root folder of the repository (where docker-compose.yml is):
