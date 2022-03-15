@@ -24,6 +24,7 @@
 - **FR12:** The application will feature a navigation bar that allows the user to move to and from pages on the web portal. [*Medium Priority*] (**BR2**)
 
 - **FR13:** The application shall automatically update changes made to the Cheetah API by parsing the data from the existing Cheetah API swagger page. [*High Priority*] (**BR2**)
+- **FR14:** The application shall track administrative changes and store the username of the administrator and the date/time of the edit. [*High Priority*] (**BR2**)
 
 
 <br>
@@ -35,7 +36,7 @@
 
 - **NR3:** The API references page shall organize the API calls by the object that the call works with. [*Low Priority*] (**BR2**)
 
-- **NR4:** The application shall be designed using the Accutech/Cheetah colors and logo [*Low Priority*] (**BR1**)
+- **NR4:** The application shall be designed using the Accutech/Cheetah colors, logos, and fit the general theme of Accutech's existing websites. [*Low Priority*] (**BR1**)
 
 - **NR5:** Private access applications shall be sent to an internal location for review before acceptance. [*Medium Priority*] (**BR2**)
 
