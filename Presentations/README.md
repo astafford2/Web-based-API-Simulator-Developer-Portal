@@ -7,4 +7,6 @@
 
 **IterationDay_3.pdf** - PDF version of the iteration 3 presentation to present third iteration feedback, progress, demo, etc.
 
-**IterationDay_4.pdf** - PDF version of the iteration 4 presentation to present third iteration feedback, progress, demo, etc.
+**IterationDay_4.pdf** - PDF version of the iteration 4 presentation to present fourth iteration feedback, progress, demo, etc.
+
+**StudentSymposium.pdf** - PDF version of the poster to present the aspects of the project at the BSU Student Symposium.
