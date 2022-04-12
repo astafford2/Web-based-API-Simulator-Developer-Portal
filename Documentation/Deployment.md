@@ -23,6 +23,7 @@
 - `Vue CLI v4.5.13`
 - `Microsoft SQL Server 2019 v15.0.2000.5 for database support`
 - `Microsoft SQL Server Management Studio 18 v18.9.2 for database management`
+- `Cypress v9.5.4` (installed on npm install)
   - Once installed, clone the Bitbucket project repository (https://bitbucket.org/accutechdev/bsu.developer-portal/src/master/) into a folder of your choosing.
 
 ## Starting/Stopping System Operations

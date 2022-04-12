@@ -15,6 +15,7 @@
 - `Microsoft SQL Server 2019 v15.0.2000.5 for database support`
 - `Microsoft SQL Server Management Studio 18 v18.9.2 for database management`
 - `Docker Desktop 4.4.4`
+- `Cypress v9.5.4` (installed on npm install)
 
 ## Required IDEs
 - IDEs used for development
@@ -56,18 +57,21 @@
                 ├── Services\
                     ├── ApiJsonService.cs               # Class that contains teh logic for the ApiJsonController controller
                     ├── CollectionService.cs            # Class that contains the logic for the CollectionController controller
+                    ├── ConsoleService.cs               # Service that extends the IConsoleService interface that lays out methods for making HTTP calls to the Cheetah API
                     ├── EmailService.cs                 # Service that extends the IEmailService interface and lays out the body of the email to be sent
                     ├── EndpointService.cs              # Class that contains the logic for the EndpointController controller
                     ├── IApiJsonService.cs              # Interface that allows the ApiJsonController to use methods available in ApiJsonService
                     ├── ICollectionService.cs           # Interface that allows the CollectionController to use methods available in CollectionService
+                    ├── IConsoleService.cs              # Interface that contains tasks to asynchronsously make console calls to the Cheetah API
                     ├── IEmailService.cs                # Interface that contains a task that asynchronously sends an email
                     ├── IEndpointService.cs             # Interface that allows the EndpointController to use method available in EndpointService
                     ├── ILoginService.cs                # Interface that contains tasks to asynchronously login to Cheetah servers
+                    ├── IParameterService.cs            # Interface that allows the ParameterController to use methods available in ParameterService
                     ├── LoginService.cs                 # Service that extends the ILoginService interface and lays out methods for logging in
-                    ├── IConsoleService.cs              # Interface that contains tasks to asynchronsously make console calls to the Cheetah API
-                    └── ConsoleService.cs               # Service that extends the IConsoleService interface that lays out methods for making HTTP calls to the Cheetah API
+                    └── ParameterService.cs             # Service that extends the IParameterService that lays out methods for editing endpoint descriptions
                 ├── ViewModels\
                     ├── CollectionViewModel.cs                # View Model that contains the context of the Collections stored in the database
+                    ├── ConsoleViewModel.cs           # View Model that contains the context of each parameter and the url of console calls made from the front-end
                     ├── EmailFormViewModel.cs           # View Model that contains the getters and setters for all of the elements to be sent in the email
                     ├── EndpointViewModel.cs            # View Model that contians the context of the Endpoints stored in the database
                     ├── LoginViewModel.cs               # View Model that contains the context of the Login to be used by Login Service
@@ -75,18 +79,19 @@
                     ├── RequestViewModel.cs           # View Model that contains the context of the Requests stored in the database
                     ├── ResponseViewModel.cs           # View Model that contains the context of the Responses stored in the database
                     ├── SchemaReferenceViewModel.cs           # View Model that contains the context of the SchemaReferences stored in the database
-                    ├── ConsoleViewModel.cs           # View Model that contains the context of each parameter and the url of console calls made from the front-end
-                    ├── SessionViewModel.cs           # View Model that contains the context of the Sessions stored in the database
                     └── SidebarViewModel.cs             # View Model that contains the context of the links that are featured in the side bar of the front-end References page
                 ├── Properties\launchSettings.json  # Json file that specifies where the back-end is running
                 ├── appSettings.json                # Json file that contains the root URL for the example endpoint data and the settings for the email functionality
+                ├── Startup.cs                # C# files that contains all of the information for what the back-end of our project opens/does/includes on startup
                 └── Portal.csproj                   # C# project containing the classes, controllers, services, models, and the launchSettings and appSettings json files
             ├── Portal.Test\
                 ├── ApiJsonTest.cs                  # Class of unit tests for ApiJson data loader classes
                 ├── CollectionServiceTest.cs        # Class of unit tests for the CollectionService.cs service
+                ├── ConsoleServiceTests.cs          # Class of unit tests for the ConsoleService.cs service
                 ├── EndpointServiceTest.cs          # Class of unit tests for the EndpointService.cs service
                 ├── FormDataController.cs           # Class of unit tests for the FormDataController.cs controller
                 ├── LoginServiceTests.cs            # Class of unit tests for the LoginService.cs service
+                ├── ParameterServiceTests.cs        # Class of unit tests for the ParameterService.cs service
                 ├── testconfig.json                 # Json file that holds the information for the testing environment
                 └── Portal.Test.csproj              # C# project that contains all of the test classes and the testconfig.json file
             └── Portal.sln                      # Contains information about what needs to be compiled
@@ -94,6 +99,12 @@
         └── DockerfileExternal              # Dockerfile to build back-end development image through an external repository
     ├── vue\                            # Front-end folder for all vue files
         ├── public\                         # Files that are served raw and accessible in its plain URL
+        ├── cypress\                           # Files relating to the Cypress test running library
+            ├── integration\                         # Test files for the front-end code for Cypress to run
+                ├── login_spec.js                       # Javascript file that contains cypress tests for the login page and functionality
+                ├── navbar_spec.js                      # Javascript file that contains cypress tests for the navbar component and button
+                ├── references_spec.js                  # Javascript file that contains cypress tests for the references page and various functionalities on that page
+                ├── workflows_spec.js                   # Javascript file that contains cypress tests for the workflows page
         ├── src\                            # Source files for vue front-end
             ├── assets\                         # Asset files for the vue front-end
             ├── components\                     # HTML components to import in vue files
@@ -115,18 +126,17 @@
             ├── router\
                 └── index.js                        # JavaScript file to declare routes and paths
             ├── views\                          # Folder to house the front-end HTML pages
-                ├── Console.vue                     # HTML for the Console page
                 ├── Home.vue                        # HTML for the Home page
                 ├── Login.vue                       # HTML and Javascript logic for the Login page
                 ├── References.vue                  # HTML and Javascript logic for the References page
+                ├── Workflows.vue                  # HTML for the Workflows page
                 └── ReferencesLanding.vue           # HTML for the References landing page
             ├── App.vue                         # Main HTML template for Vue pages
             └── main.js                         # JavaScript file for Vue, Bootstrap, etc. imports
-        ├── tests\unit\
-            └── Login.spec.js              # JavaScript file containing the unit tests for Login.vue
         ├── Dockerfile                      # Dockerfile to build front-end development image
         ├── DockerfileExternal              # Dockerfile to build front-end development image through an external repository
         ├── tailwind.config.js              # Configuration file for Tailwind CSS that lays out more in depth information for how we'd like Tailwind to function
+        ├── cypress.json              # Configuration file for Cypress that sets different default value and behaviors when running tests
         └── package.json                    # JSON file to store vue config data and npm script aliases
     ├── docker-compose.yml              # YAML file to build all Docker containers for local development internally
     └── README.md                       # Markdown file that briefly explains the project and list release dates
@@ -222,8 +232,11 @@
     - Click `Ok` to restore the Cheetah database from the backup file
 
 #### &emsp;Front-end:
-- In a CLI, move into the *\vue* folder and run the front-end tests
-    - `npm run test`
+- In a CLI, move into the *\vue* folder and open the Cypress UI
+    - `npx cypress open`
+- On the Cypress UI, run all test files in the Cypress test runner
+    - Click `Run all specs`
+
 
 #### &emsp;Back-end:
 - In a CLI, move into the *\dotnet\Portal\Portal.Test* folder and run the back-end tests
@@ -232,24 +245,23 @@
 
 ### Interpreting code tests
 #### &emsp;Front-end:
-- After running the command `npm run test`, if the tests pass, they will have a checkmark next to them as shown below
+- If the Cypress tests pass, they will have a checkmark next to them as shown below
 <br>
-<img src="DocumentationImages/VueTestPassIteration2.PNG">
+<img src="DocumentationImages/CypressTestsPass.PNG">
 <br>
-<ul>
-    <li>"login page exists" tests if the login page can be found
-    <li>"login is accepted from Cheetah" test if the login information from the user is valid with Accutech's servers
-</ul>
+
 
 #### &emsp;Back-end:
 - After running the command `dotnet test`, if the tests pass the test window will look similar to below
 <br>
-<img src="DocumentationImages/DotnetTestsPassIteration2.PNG">
+<img src="DocumentationImages/CSharpTestsPass.PNG">
 <br>
 <ul>
     <li>ApiJsonTest contains methods for testing getting information from the Cheetah API swagger json
     <li>CollectionServiceTest contains methods to test getting information from the database
+    <li>ConsoleServiceTest contains methods for testing different inputs into the sandbox console
     <li>EndpointServiceTest contains methods for putting description edits into the database
     <li>FormDataControllerTest contains methods for testing the email sending configurations
     <li>LoginServiceTest contains methods for testing the verifications of users who log into our app
+    <li>ParameterServiceTest contains methods for testing editing parameter descriptions
 </ul>
