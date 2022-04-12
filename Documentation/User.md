@@ -42,9 +42,9 @@ On the references page, the user will first be brought to the references landing
 
 <img src="DocumentationImages/EditOverviewModal.PNG"> <br>
 - If a user wishes to see what edits have been made, while in edit mode they can click the "Edit Overview" button. A modal with listing the items of the page you are currently on will open.
-    - The button in the modal will be orange if edits were made and blue if no changes have been made
-    - Selecting an item button will show the original value before new edits were made and the items current state. 
-    - When selecting an item that has been edited (marked orange) the user can choose to press save lcally or undo changes. Saving locally will update the original value so that it will not appear as having pending edits. To completely save the edits however the user will still need to click the save all button on the edits page. Clicking the undo button will undo any edits made for the item and revert it back to the original value or last save. 
+    - The button in the modal will be (orange) if edits were made and (blue) if there are no changes.
+    - Selecting an item button will show the original value before new edits were made and the item's current state. 
+    - When selecting an item that has been edited (marked orange), the user can choose to press the save locally or undo changes buttons. Pressing the save locally button will update the original value and update the original value pending edits. The user will still need to click the save all button on the edits page to save any changes. Clicking the undo button will undo any edits made for the item and revert it to the original value or last save. 
 
 <img src="DocumentationImages/EnteredParameter.PNG"> <br>
 - The user can then input parameters they would like to test
