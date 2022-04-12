@@ -91,6 +91,7 @@
 ## Troubleshooting
 - In case of an issue, consult the following steps to properly troubleshoot the issue:
     - Ensure the back-end and front-end are both running properly (see the Starting/Stopping System Operations section for more detail).
+    - Ensure that the database has been restored correctly (see the Starting/Stopping System Operations section under the "Database" tab for more detail)
     - In case of an issue with the Request Access form:
         - Ensure the entire form is filled out properly before submission.
         - Check the appsettings.json file (dotnet/Portal/Portal/appsettings.json) to ensure 'Enabled' is set to 'true'.
@@ -102,7 +103,7 @@
 - The critical sections that are mostly likely to fail are in the Request Access section of the Login page and the loading of data stored in the Database.
     - When filling out the Request Access form, ensure that each field in the form is filled out. If any field is left blank, the access request may not properly send and the user may receive an error.
     - The email sent after submitting the Request Access form may fail to send. Ensure that '"Enabled": true' is set in 'dotnet/Portal/Portal/appsettings.json'--if 'Enabled' is set to 'false', the email may fail to send.
-- If the References page displays a spinner and does not load information in a reasonable amount of time, more than likely the database backup file was not restored correctly. Ensure that the database can be seen in SQL Server Management Studio and that queries can be run on it. Alternatively if you are running from Docker, assure that the steps in the above section "Starting/Stopping System Operations with Docker" were done correctly.
+    - If the References page displays a spinner and does not load information in a reasonable amount of time, more than likely the database backup file was not restored correctly. Ensure that the database can be seen in SQL Server Management Studio and that queries can be run on it. Alternatively if you are running from Docker, assure that the steps in the above section "Starting/Stopping System Operations with Docker" were done correctly.
 - The sandbox test console on the reference page can give several different messages relating to problems that arose when testing an endpoint. The messages are as follows:
     - "Unauthorized. Check your Cheetah API access": The user no longer has a valid JWT token and should check that they still have access to the API
     - "Unable to communicate with Accutech. Please try again later": A connection to Accutech servers for testing purposes was not able to be made
