@@ -28,7 +28,7 @@ The Student Symposium was extremely informative and allowed me several different
 
 
 ### Austin
-
+The Student Symposium was an excellent learning experience. It gave me the chance to share our work with those outside CS498--particularly those outside the computer science field, which proved to be a bit of a challenge at some points. The art of explaining technical terms and processes to those not well-versed in it is a useful skill and I'm glad I had the opportunity to work on it. I also enjoyed seeing the works of students in other fields--it allowed me to broaden my horizons beyond computer science even if it only a little bit.
 
 ### Andrew
 The Student Symposium was a great experience for explanation concepts within our realm to those who don't know much or anything about them. It was very informative on what people look for in a project from a very overall understanding and the best ways to explain concepts in a way that those without the same knowledge as me can easily understand the pieces of a development project. Seeing so many different colleges of study at the symposium was very enlightening on how many opportunities there are for all student to get experience in their field before they graduate.
