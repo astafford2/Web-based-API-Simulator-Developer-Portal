@@ -12,3 +12,5 @@
 **IterationDay_5.pdf** - PDF version of the iteration 5 presentation to present fifth iteration feedback, progress, demo, etc.
 
 **StudentSymposium.pdf** - PDF version of the poster to present the aspects of the project at the BSU Student Symposium.
+
+**Closure.pdf** - PDF version of the closure presentation to present project transfer information.
